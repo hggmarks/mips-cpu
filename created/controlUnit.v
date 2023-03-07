@@ -33,6 +33,7 @@ parameter ST_SLLV = 6'b000111;
 parameter ST_SLT = 6'b001111;
 parameter ST_SLTI = 6'b011111;
 parameter ST_SRA = 6'b000010;
+parameter ST_SRAV = 6'b000110;
 
 
 parameter TYPE_R = 6'h0;
@@ -43,6 +44,7 @@ parameter OP_SLLV = 6'h4;
 parameter OP_SLT = 6'h2a;
 parameter OP_SLTI = 6'ha;
 parameter OP_SRA = 6'h3;
+parameter OP_SRAV = 6'h7;
 
 
     initial begin
@@ -183,6 +185,9 @@ parameter OP_SRA = 6'h3;
                                     end
                                     OP_SRA: begin
                                         STATE = ST_SRA;
+                                    end
+                                    OP_SRAV: begin
+                                        STATE = ST_SRAV;
                                     end
                                 endcase
                             end
@@ -470,7 +475,7 @@ parameter OP_SRA = 6'h3;
                         COUNTER = COUNTER + 1;
                     end
                     else if (COUNTER == 6'd1) begin
-                        STATE = ST_COMMON;
+                        STATE = ST_SRA;
                         PCWrite = 1'b0;
                         memRW = 1'b0;
                         IRWrite = 1'b0;
@@ -485,6 +490,85 @@ parameter OP_SRA = 6'h3;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b100; ///
                         muxSRNumSel = 2'b01; ///
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd2) begin
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b100;  ///
+                        muxMemToReg = 3'b010; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00; 
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_SRAV:begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_SRAV;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b000;
+                        muxMemToReg = 3'b000;
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b01; ///
+                        muxSRControl = 3'b001; ///
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd1) begin
+                        STATE = ST_SRAV;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b000;  
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b100; ///
+                        muxSRNumSel = 2'b01; ///
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd2) begin
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b100;  ///
+                        muxMemToReg = 3'b010; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00; 
 
                         COUNTER = COUNTER + 1;
                     end
