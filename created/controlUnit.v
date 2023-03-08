@@ -25,20 +25,31 @@ module control_unit (
 reg [5:0] COUNTER;
 reg [5:0] STATE;
 
+// definir os estados
 parameter ST_COMMON = 6'b000000;
-parameter ST_ADD = 6'b000001;
+parameter ST_ADD = 6'b000001; // 1
+parameter ST_AND = 6'b000010; // 2
+parameter ST_SUB = 6'b001110; // 14
+parameter ST_ADDI = 6'b010010; // 18
+parameter ST_ADDIU = 6'b010011; // 19
 parameter ST_RESET = 6'b111111;
-parameter ST_SLL = 6'b000011;
-parameter ST_SLLV = 6'b000111;
-parameter ST_SLT = 6'b001111;
-parameter ST_SLTI = 6'b011111;
-parameter ST_SRA = 6'b000010;
-parameter ST_SRAV = 6'b000110;
+
+parameter ST_SLL = 6'b001000; // 8
+parameter ST_SLLV = 6'b001001; // 9 
+parameter ST_SLT = 6'b001010; // 10
+parameter ST_SRA = 6'b001011; // 11 
+parameter ST_SRAV = 6'b001100; // 12
+parameter ST_SLTI = 6'b011111; // 31
 
 
+// definir os OPCODES
 parameter TYPE_R = 6'h0;
 
 parameter OP_ADD = 6'h20;
+parameter OP_AND = 6'h24;
+parameter OP_SUB = 6'h22;
+parameter OP_ADDI = 6'h8;
+parameter OP_ADDIU = 6'h9;
 parameter OP_SLL = 6'h0;
 parameter OP_SLLV = 6'h4;
 parameter OP_SLT = 6'h2a;
@@ -169,10 +180,16 @@ parameter OP_SRAV = 6'h7;
                         COUNTER = 6'b000000;
 
                         case (opcode)
-                            TYPE_R: begin
+                            TYPE_R: begin //instruções do tipo R vem mudar o OPCODE pra FUNC aqui
                                 case (funct)
                                     OP_ADD: begin
                                         STATE = ST_ADD;
+                                    end
+                                    OP_AND: begin
+                                        STATE = ST_AND;
+                                    end
+                                    OP_SUB: begin
+                                        STATE = ST_SUB;
                                     end
                                     OP_SLL: begin
                                         STATE = ST_SLL;
@@ -191,14 +208,20 @@ parameter OP_SRAV = 6'h7;
                                     end
                                 endcase
                             end
-                            
+                            // instruções que nao são do tipo R nao precisam mudar o OPCODE
                             OP_SLTI: begin
                                 STATE = ST_SLTI;
+                            end
+                            OP_ADDI: begin
+                                STATE = ST_ADDI;
+                            end
+                            OP_ADDIU: begin
+                                STATE = ST_ADDIU;
                             end
                         endcase
                     end
                 end
-
+                // oq realmente vai acontecer em cada função
                 ST_ADD: begin
                     if (COUNTER == 6'd0) begin
                         STATE = ST_ADD;
@@ -246,7 +269,199 @@ parameter OP_SRAV = 6'h7;
                         COUNTER = COUNTER + 1;
                     end
                 end
-                
+
+                ST_AND: begin
+                    if(COUNTER == 6'd0) begin
+                        STATE = ST_AND;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+                        aluOP = 3'b011; ///
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010; ///
+                        muxAluSrcB = 3'b000; ///
+                        muxRegDst = 3'b000;
+                        muxMemToReg = 3'b000;
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd1 || COUNTER == 6'd2) begin
+
+                        if (COUNTER == 6'd2) begin
+                            STATE = ST_COMMON;
+                        end
+                        else begin
+                            STATE = ST_AND;
+                        end
+
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b001;
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b010; ///
+                        muxMemToReg = 3'b110; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_SUB: begin
+                    if(COUNTER == 6'd0) begin
+                        STATE = ST_SUB;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+                        aluOP = 3'b010; ///
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010; ///
+                        muxAluSrcB = 3'b000; ///
+                        muxRegDst = 3'b000;
+                        muxMemToReg = 3'b000;
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd1 || COUNTER == 6'd2) begin
+
+                        if (COUNTER == 6'd2) begin
+                            STATE = ST_COMMON;
+                        end
+                        else begin
+                            STATE = ST_SUB;
+                        end
+
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b001;
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b010; ///
+                        muxMemToReg = 3'b110; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_ADDI: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_ADDI;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+                        aluOP = 3'b001; ///
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010; ///
+                        muxAluSrcB = 3'b010; ///
+                        muxRegDst = 3'b000;
+                        muxMemToReg = 3'b000;
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd1 || COUNTER == 6'd2) begin
+
+                        if (COUNTER == 6'd2) begin
+                            STATE = ST_COMMON;
+                        end
+                        else begin
+                            STATE = ST_ADDI;
+                        end
+
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b001;
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b010; ///
+                        muxMemToReg = 3'b110; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_ADDIU: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_ADDIU;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+                        aluOP = 3'b001; ///
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010; ///
+                        muxAluSrcB = 3'b010; ///
+                        muxRegDst = 3'b000;
+                        muxMemToReg = 3'b000;
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd1 || COUNTER == 6'd2) begin
+
+                        if (COUNTER == 6'd2) begin
+                            STATE = ST_COMMON;
+                        end
+                        else begin
+                            STATE = ST_ADDIU;
+                        end
+
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b001;
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b010; ///
+                        muxMemToReg = 3'b110; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
                 ST_SLL: begin
                     if (COUNTER == 6'd0) begin
                         STATE = ST_SLL;
