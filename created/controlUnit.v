@@ -192,11 +192,8 @@ parameter OP_BREAK = 6'hd;
                         COUNTER = 6'b000000;
 
                         case (opcode)
-<<<<<<< HEAD
-                            TYPE_R: begin //instruções do tipo R tem o mesmo opcode, logo o parametro vai ser o funct
-=======
                             TYPE_R: begin //instruções do tipo R vem mudar o OPCODE pra FUNC aqui
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
+
                                 case (funct)
                                     OP_ADD: begin
                                         STATE = ST_ADD;
@@ -240,12 +237,10 @@ parameter OP_BREAK = 6'hd;
                             OP_ADDIU: begin
                                 STATE = ST_ADDIU;
                             end
-<<<<<<< HEAD
                             OP_SW: begin
                                 STATE = ST_SW;
                             end
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
+
                         endcase
                     end
                 end
@@ -317,10 +312,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
-<<<<<<< HEAD
                         storeSize = 2'b00;
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
 
                         COUNTER = COUNTER + 1;
                     end
@@ -347,10 +339,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
-<<<<<<< HEAD
                         storeSize = 2'b00;
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
 
                         COUNTER = COUNTER + 1;
                     end
@@ -373,10 +362,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
-<<<<<<< HEAD
                         storeSize = 2'b00;
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
 
                         COUNTER = COUNTER + 1;
                     end
@@ -403,7 +389,6 @@ parameter OP_BREAK = 6'hd;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
-<<<<<<< HEAD
                         storeSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
@@ -428,8 +413,6 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
 
                         COUNTER = COUNTER + 1;
                     end
@@ -452,10 +435,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
-<<<<<<< HEAD
                         storeSize = 2'b00;
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
 
                         COUNTER = COUNTER + 1;
                     end
@@ -482,10 +462,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
-<<<<<<< HEAD
                         storeSize = 2'b00;
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
 
                         COUNTER = COUNTER + 1;
                     end
@@ -508,10 +485,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
-<<<<<<< HEAD
                         storeSize = 2'b00;
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
 
                         COUNTER = COUNTER + 1;
                     end
@@ -538,10 +512,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRInputSel = 2'b00;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
-<<<<<<< HEAD
                         storeSize = 2'b00;
-=======
->>>>>>> 7e8dc3f9374a522b43ecd1657b198a6a719a5da9
 
                         COUNTER = COUNTER + 1;
                     end
