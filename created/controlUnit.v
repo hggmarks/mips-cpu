@@ -4,6 +4,7 @@ module control_unit (
     input wire overflow,
     input wire [5:0] opcode,
     input wire [5:0] funct,
+    input wire excessao,
     output reg PCWrite,
     output reg memRW, //memRead and memWrite
     output reg IRWrite,
@@ -20,6 +21,11 @@ module control_unit (
     output reg [1:0] muxSRNumSel,
     output reg [1:0] storeSize,
     output reg [1:0] loadSize,
+    output reg  HiWrite,
+    output reg  LoWrite,
+    output reg MultDiv,
+    output reg EPCWrite,
+
     output reg rstOut
 );
 
@@ -48,6 +54,10 @@ parameter ST_LH = 6'b011010; //26 daniel
 parameter ST_LW = 6'b011100; //28 daniel
 parameter ST_SLTI = 6'b011111; // 31 iti
 parameter ST_SW = 6'b100000; // 32 iti
+parameter ST_MFHI = 6'b000110; //6 Dodo 
+parameter ST_MFLO = 6'b000111; //7 Dodo
+parameter ST_MULT = 6'b000100; //4 Dodo
+parameter ST_DIV = 6'b000011; //3 Dodo
 
 
 // definir os OPCODES
@@ -69,6 +79,10 @@ parameter OP_SW = 6'h2b;
 parameter OP_BREAK = 6'hd;
 parameter OP_LB = 6'h20;
 parameter OP_LH = 6'h21;
+parameter OP_MFHI = 6'h10;
+parameter OP_MFLO = 6'h12;
+parameter OP_MULT = 6'h18;
+parameter OP_DIV = 6'h1a;
 
 
     initial begin
@@ -98,6 +112,10 @@ parameter OP_LH = 6'h21;
                 muxSRNumSel = 2'b00;
                 storeSize = 2'b00;
                 loadSize = 2'b00;
+                HiWrite = 1'b0;
+                LoWrite = 1'b0;
+                MultDiv = 1'b0;
+                EPCWrite = 1'b0;
 
                 rstOut = 1'b1;
 
@@ -123,6 +141,10 @@ parameter OP_LH = 6'h21;
                 muxSRNumSel = 2'b00;
                 storeSize = 2'b00;
                 loadSize = 2'b00;
+                HiWrite = 1'b0;
+                LoWrite = 1'b0;
+                MultDiv = 1'b0;
+                EPCWrite = 1'b0;
 
                 rstOut = 1'b1;
 
@@ -150,7 +172,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
-
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
                         rstOut = 1'b0;
 
                         COUNTER = COUNTER + 1;
@@ -176,7 +201,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
-
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
                         rstOut = 1'b0;
 
                         COUNTER = COUNTER + 1;
@@ -198,6 +226,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         rstOut = 1'b0;
                         COUNTER = 6'b000000;
@@ -236,6 +268,20 @@ parameter OP_LH = 6'h21;
                                     OP_BREAK: begin
                                         STATE = ST_BREAK;
                                     end
+                                    OP_MFHI: begin
+                                        STATE = ST_MFHI;
+                                    end
+                                    OP_MFLO: begin
+                                        STATE = ST_MFLO;
+                                    end
+                                    OP_MULT: begin
+                                        STATE = ST_MULT;
+                                    end
+                                    OP_DIV: begin
+                                        STATE = ST_DIV;
+                                    end
+                                
+
                                 endcase
                             end
                             // instruções que nao são do tipo R nao precisam mudar o OPCODE
@@ -284,6 +330,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -312,6 +362,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -336,6 +390,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -364,6 +422,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -388,6 +450,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -416,6 +482,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -440,6 +510,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -464,6 +538,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -492,6 +570,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -516,6 +598,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -544,6 +630,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -568,6 +658,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -589,6 +683,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b01; ///
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -611,6 +709,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -636,6 +738,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -658,6 +764,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00; ///
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -680,6 +790,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -704,6 +818,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -726,6 +844,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -750,6 +872,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -771,6 +897,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -795,6 +925,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -816,6 +950,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b01; ///
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -837,6 +975,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -861,6 +1003,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -882,6 +1028,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b01; ///
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -903,6 +1053,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -927,6 +1081,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -948,6 +1106,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b01; ///
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -969,6 +1131,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -993,6 +1159,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b11; //
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1014,6 +1184,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1038,6 +1212,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00; 
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1060,6 +1238,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1082,6 +1264,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b01; ///
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1106,6 +1292,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00; 
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1128,6 +1318,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1150,6 +1344,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b10; ///
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1174,6 +1372,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00; 
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1196,6 +1398,10 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -1218,6 +1424,251 @@ parameter OP_LH = 6'h21;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
                         loadSize = 2'b11; ///
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+                ST_MFHI: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b001; ///
+                        muxMemToReg = 3'b011; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_MFLO: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b001; /// 
+                        muxMemToReg = 3'b010; /// 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0;
+                        EPCWrite = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_MULT: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_MULT;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0; ///
+                        EPCWrite = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                    end
+
+                    else if (COUNTER == 6'd1)begin
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b1; ///
+                        LoWrite = 1'b1; ///
+                        MultDiv = 1'b0; 
+                        EPCWrite = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_DIV: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_DIV;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b0;
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b1; ///
+                        EPCWrite = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                    end
+
+                    else if (COUNTER == 6'd1 & excessao == 0)begin
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; 
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b1; ///
+                        LoWrite = 1'b1; ///
+                        MultDiv = 1'b0; 
+                        EPCWrite = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                    end
+
+                    else if (COUNTER == 6'd1 & excessao == 1)begin
+                        STATE = ST_DIV;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b010; /// 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000; ///
+                        muxAluSrcB = 3'b001; /// 
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b0; 
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0; 
+                        EPCWrite = 1'b1; ///
+
+                        COUNTER = COUNTER + 1;
+                    end
+
+                    else if ((COUNTER == 6'd2 & excessao == 1) || (COUNTER == 6'd3 & excessao == 1))begin
+                        STATE = ST_DIV;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0; ///
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b101; ///
+                        muxAluSrcA = 3'b000;
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b0; 
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0; 
+                        EPCWrite = 1'b0;
+
+                        COUNTER = COUNTER + 1;
+                    end
+
+                    else if (COUNTER == 6'd4 & excessao == 1)begin
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b1; ///
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000; 
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000;
+                        muxAluSrcB = 3'b000; 
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000; ///
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+                        HiWrite = 1'b0; 
+                        LoWrite = 1'b0;
+                        MultDiv = 1'b0; 
+                        EPCWrite = 1'b0;
 
                         COUNTER = COUNTER + 1;
                     end
