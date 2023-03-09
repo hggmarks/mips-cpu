@@ -19,6 +19,7 @@ module control_unit (
     output reg [2:0] muxSRControl,
     output reg [1:0] muxSRNumSel,
     output reg [1:0] storeSize,
+    output reg [1:0] loadSize,
     output reg rstOut
 );
 
@@ -42,6 +43,9 @@ parameter ST_SLT = 6'b001010; // 10 iti
 parameter ST_SRA = 6'b001011; // 11  iti
 parameter ST_SRAV = 6'b001100; // 12 iti
 parameter ST_SRL = 6'b001101; //13 iti
+parameter ST_LB = 6'b011001; //25 daniel
+parameter ST_LH = 6'b011010; //26 daniel
+parameter ST_LW = 6'b011100; //28 daniel
 parameter ST_SLTI = 6'b011111; // 31 iti
 parameter ST_SW = 6'b100000; // 32 iti
 
@@ -63,6 +67,8 @@ parameter OP_SRAV = 6'h7;
 parameter OP_SRL = 6'h2;
 parameter OP_SW = 6'h2b;
 parameter OP_BREAK = 6'hd;
+parameter OP_LB = 6'h20;
+parameter OP_LH = 6'h21;
 
 
     initial begin
@@ -91,6 +97,7 @@ parameter OP_BREAK = 6'hd;
                 muxSRControl = 3'b000;
                 muxSRNumSel = 2'b00;
                 storeSize = 2'b00;
+                loadSize = 2'b00;
 
                 rstOut = 1'b1;
 
@@ -115,6 +122,7 @@ parameter OP_BREAK = 6'hd;
                 muxSRControl = 3'b000;
                 muxSRNumSel = 2'b00;
                 storeSize = 2'b00;
+                loadSize = 2'b00;
 
                 rstOut = 1'b1;
 
@@ -141,6 +149,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         rstOut = 1'b0;
 
@@ -166,6 +175,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         rstOut = 1'b0;
 
@@ -187,6 +197,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         rstOut = 1'b0;
                         COUNTER = 6'b000000;
@@ -240,6 +251,15 @@ parameter OP_BREAK = 6'hd;
                             OP_SW: begin
                                 STATE = ST_SW;
                             end
+                            OP_LB: begin
+                                STATE = ST_LB;
+                            end
+                            OP_LH: begin
+                                STATE = ST_LH;
+                            end
+                            OP_LW: begin
+                                STATE = ST_LW;
+                            end
 
                         endcase
                     end
@@ -263,6 +283,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -290,6 +311,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -313,6 +335,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -340,6 +363,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -363,6 +387,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -390,6 +415,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -413,6 +439,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -436,6 +463,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -463,6 +491,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -486,6 +515,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -513,6 +543,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000;
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -536,6 +567,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b001; ///
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -556,6 +588,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b010; ///
                         muxSRNumSel = 2'b01; ///
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -577,6 +610,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -601,6 +635,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b001; ///
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -622,6 +657,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b010; ///
                         muxSRNumSel = 2'b00; ///
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -643,6 +679,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -666,6 +703,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -687,6 +725,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -710,6 +749,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -730,6 +770,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -753,6 +794,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b001; ///
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -773,6 +815,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b100; ///
                         muxSRNumSel = 2'b01; ///
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -793,6 +836,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -816,6 +860,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b001; ///
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -836,6 +881,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b100; ///
                         muxSRNumSel = 2'b01; ///
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -856,6 +902,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -879,6 +926,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b001; ///
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -899,6 +947,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b011; ///
                         muxSRNumSel = 2'b01; ///
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -919,6 +968,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00; 
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -942,6 +992,7 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b11; //
+                        loadSize = 2'b00;
 
                         COUNTER = COUNTER + 1;
                     end
@@ -962,6 +1013,211 @@ parameter OP_BREAK = 6'hd;
                         muxSRControl = 3'b000; 
                         muxSRNumSel = 2'b00;
                         storeSize = 2'b00;
+                        loadSize = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_LB: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_LB;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+                        aluOP = 3'b001; ///
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010; ///
+                        muxAluSrcB = 3'b010; ///
+                        muxRegDst = 3'b000;
+                        muxMemToReg = 3'b000;
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd1 || COUNTER == 6'd2) begin
+
+                        STATE = ST_LB;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0; ///
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000;
+                        muxIord = 3'b001; ///
+                        muxAluSrcA = 3'b000;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00;
+                        loadSize = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd3) begin
+
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0; 
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b000;
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b000; ///
+                        muxMemToReg = 3'b100; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00;
+                        loadSize = 2'b01; ///
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_LH: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_LH;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+                        aluOP = 3'b001; ///
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010; ///
+                        muxAluSrcB = 3'b010; ///
+                        muxRegDst = 3'b000;
+                        muxMemToReg = 3'b000;
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd1 || COUNTER == 6'd2) begin
+
+                        STATE = ST_LH;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0; ///
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000;
+                        muxIord = 3'b001; ///
+                        muxAluSrcA = 3'b000;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00;
+                        loadSize = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd3) begin
+
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0; 
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b000;
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b000; ///
+                        muxMemToReg = 3'b100; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00;
+                        loadSize = 2'b10; ///
+
+                        COUNTER = COUNTER + 1;
+                    end
+                end
+
+                ST_LW: begin
+                    if (COUNTER == 6'd0) begin
+                        STATE = ST_LW;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0;
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0;
+                        aluOP = 3'b001; ///
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b010; ///
+                        muxAluSrcB = 3'b010; ///
+                        muxRegDst = 3'b000;
+                        muxMemToReg = 3'b000;
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00; 
+                        muxSRControl = 3'b000; 
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00; 
+                        loadSize = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd1 || COUNTER == 6'd2) begin
+
+                        STATE = ST_LW;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0; ///
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b0; 
+                        aluOP = 3'b000;
+                        muxIord = 3'b001; ///
+                        muxAluSrcA = 3'b000;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b000; 
+                        muxMemToReg = 3'b000; 
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00;
+                        loadSize = 2'b00;
+
+                        COUNTER = COUNTER + 1;
+                    end
+                    else if (COUNTER == 6'd3) begin
+
+                        STATE = ST_COMMON;
+                        PCWrite = 1'b0;
+                        memRW = 1'b0; 
+                        IRWrite = 1'b0;
+                        RegWrite = 1'b1; ///
+                        aluOP = 3'b000;
+                        muxIord = 3'b000;
+                        muxAluSrcA = 3'b000;
+                        muxAluSrcB = 3'b000;
+                        muxRegDst = 3'b000; ///
+                        muxMemToReg = 3'b100; ///
+                        muxPCSource = 3'b000;
+                        muxSRInputSel = 2'b00;
+                        muxSRControl = 3'b000;
+                        muxSRNumSel = 2'b00;
+                        storeSize = 2'b00;
+                        loadSize = 2'b11; ///
 
                         COUNTER = COUNTER + 1;
                     end
