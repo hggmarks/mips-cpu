@@ -12,8 +12,8 @@ module control_unit (
     output reg AluOutWrite,
     output reg [2:0] aluOP,
     output reg [2:0] muxIord,
-    output reg [2:0] muxAluSrcA,
-    output reg [2:0] muxAluSrcB,
+    output reg [1:0] muxAluSrcA,
+    output reg [1:0] muxAluSrcB,
     output reg [2:0] muxRegDst,
     output reg [2:0] muxMemToReg,
     output reg [2:0] muxPCSource,
@@ -29,9 +29,10 @@ parameter ST_WAIT = 7'd127;
 parameter ST_COMMON_0 = 7'd1;
 parameter ST_COMMON_1 = 7'd2;
 parameter ST_COMMON_2 = 7'd3;
+parameter ST_COMMON_WAIT = 7'd4;
 //parameter ST_ADDI = 7'd4;
 
-parameter ST_ADD_1 = 7'd4;
+parameter ST_ADD_1 = 7'd5;
 
 parameter ST_ADDI = 7'd6;
 
@@ -58,8 +59,8 @@ parameter OP_ADDI = 7'h8;
         AluOutWrite <= 1'b0;
         aluOP <= 3'b000;
         muxIord <= 3'b000;
-        muxAluSrcA <= 3'b000;
-        muxAluSrcB <= 3'b000;
+        muxAluSrcA <= 2'b00;
+        muxAluSrcB <= 2'b00;
         muxRegDst <= 3'b000;
         muxMemToReg <= 3'b000;
         muxPCSource <= 3'b000;
@@ -67,7 +68,6 @@ parameter OP_ADDI = 7'h8;
 
         case (STATE)
             ST_RESET: begin
-
                 RegWrite <= 1'b1; ///
                 muxRegDst <= 3'b100;   ///
                 muxMemToReg <= 3'b000; ///
@@ -77,22 +77,23 @@ parameter OP_ADDI = 7'h8;
                 memRW <= 1'b0;
             end
             ST_COMMON_1: begin
-                muxAluSrcA <= 3'b000;
-                muxAluSrcB <= 3'b001;
+                muxAluSrcA <= 2'b00;
+                muxAluSrcB <= 2'b01;  // 4 do pc + 4
                 aluOP <= 3'b001;
                 muxPCSource <= 3'b001;
                 PCWrite <= 1'b1;
                 IRWrite <= 1'b1;
             end
-            ST_COMMON_1: begin
-                muxAluSrcA <= 3'b000;
-                muxAluSrcB <= 3'b011;
+            ST_COMMON_2: begin
+		        ABWrite <= 1'b1;
+                muxAluSrcA <= 2'b00;
+                muxAluSrcB <= 2'b11; //prevendo um branch
                 aluOP <= 3'b001;
             end
 
             ST_ADDI: begin
-                muxAluSrcA <= 3'b010;
-                muxAluSrcB <= 3'b010;
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b10; // pegando imediato do sign xtend
                 aluOP <= 3'b001;
                 muxRegDst <= 3'b000;
                 RegWrite <= 1'b1;
@@ -100,18 +101,15 @@ parameter OP_ADDI = 7'h8;
             end
 
             ST_ADD_1: begin
-                muxAluSrcA <= 3'b010;
-                muxAluSrcB <= 3'b000;
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b00; // deveria voltar a pegar do REG_B_
                 aluOP <= 3'b001;
                 muxRegDst <= 3'b010;
                 RegWrite <= 1'b1;
                 muxMemToReg <= 3'b110;
             end
 
-            ST_ARIT_COMMOM: begin
-
-            end
-
+            ST_COMMON_WAIT,
             ST_WAIT:
                 rstOut <= 3'b000;
 
@@ -135,10 +133,12 @@ parameter OP_ADDI = 7'h8;
                     STATE <= ST_COMMON_1;
                 
                 ST_COMMON_1:
+                    STATE <= ST_COMMON_WAIT;
+
+                ST_COMMON_WAIT:
                     STATE <= ST_COMMON_2;
                 
                 ST_COMMON_2:
-
                     case (opcode) 
 
                         TYPE_R: 

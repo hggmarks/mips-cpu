@@ -1,22 +1,26 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
+add wave -noupdate /cpu/clk
+add wave -noupdate /cpu/reset
 add wave -noupdate -radix decimal -radixshowbase 1 /cpu/PC_/Saida
 add wave -noupdate -radix unsigned /cpu/CONTROL_UNIT_/opcode
 add wave -noupdate -radix unsigned /cpu/CONTROL_UNIT_/funct
 add wave -noupdate -radix unsigned /cpu/CONTROL_UNIT_/COUNTER
 add wave -noupdate -radix unsigned /cpu/CONTROL_UNIT_/STATE
-add wave -noupdate -radix decimal /cpu/REG_A_/Entrada
 add wave -noupdate -radix unsigned /cpu/CONTROL_UNIT_/aluOP
 add wave -noupdate -radix decimal /cpu/MUX_ALUSrc_A_/saida
 add wave -noupdate -radix unsigned /cpu/MUX_ALUSrc_A_/sel
 add wave -noupdate -radix decimal /cpu/MUX_ALUSrc_B_/saida
 add wave -noupdate -radix decimal /cpu/ULA_/A
 add wave -noupdate -radix decimal /cpu/ULA_/B
-add wave -noupdate -radix decimal /cpu/ULA_/S
+add wave -noupdate -label {SAIDA ULA} -radix decimal /cpu/ULA_/S
+add wave -noupdate /cpu/ULA_/Seletor
 add wave -noupdate -radix decimal /cpu/ALU_OUT_/Entrada
 add wave -noupdate -radix decimal /cpu/ALU_OUT_/Saida
 add wave -noupdate -radix unsigned /cpu/ALU_OUT_/Load
 add wave -noupdate -radix unsigned /cpu/CONTROL_UNIT_/AluOutWrite
+add wave -noupdate /cpu/REG_A_/Load
+add wave -noupdate -radix decimal /cpu/REG_A_/Entrada
 add wave -noupdate -radix decimal /cpu/REG_A_/Saida
 add wave -noupdate -radix decimal /cpu/REG_B_/Entrada
 add wave -noupdate -radix decimal /cpu/REG_B_/Saida
@@ -43,11 +47,22 @@ add wave -noupdate /cpu/IR_/Instr15_0
 add wave -noupdate /cpu/clk
 add wave -noupdate /cpu/reset
 add wave -noupdate -radix decimal /cpu/MEM_/Address
+add wave -noupdate /cpu/clk
+add wave -noupdate /cpu/reset
+add wave -noupdate /cpu/clk
+add wave -noupdate /cpu/reset
+add wave -noupdate -radix decimal /cpu/MUX_ALUSrc_B_/b
+add wave -noupdate -radix decimal /cpu/MUX_ALUSrc_B_/sign_extend
+add wave -noupdate -radix decimal /cpu/MUX_ALUSrc_B_/sign_left
+add wave -noupdate /cpu/MUX_ALUSrc_B_/sel
+add wave -noupdate -radix decimal /cpu/MUX_ALUSrc_B_/saida
+add wave -noupdate /cpu/clk
+add wave -noupdate /cpu/reset
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1319 ps} 0}
+WaveRestoreCursors {{Cursor 1} {1011 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 257
-configure wave -valuecolwidth 251
+configure wave -valuecolwidth 138
 configure wave -justifyvalue left
 configure wave -signalnamewidth 0
 configure wave -snapdistance 10
@@ -60,7 +75,7 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 update
-WaveRestoreZoom {876 ps} {1399 ps}
+WaveRestoreZoom {670 ps} {1296 ps}
 view wave 
 wave clipboard store
 wave create -driver freeze -pattern clock -initialvalue 1 -period 100ps -dutycycle 50 -starttime 0ps -endtime 4000ps sim:/cpu/clk 

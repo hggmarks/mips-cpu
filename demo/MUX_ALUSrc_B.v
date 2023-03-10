@@ -10,9 +10,9 @@ module MUX_ALUSrc_B(
   always@(*) begin
     case (sel)
         2'b00: saida = b;
-        2'b01: saida = 32'b00000000000000000000000000000100; //reg 29
-	2'b10: saida = sign_extend; //reg 31
-	2'b11: saida = sign_left;
+        2'b01: saida = 32'd4;
+	      2'b10: saida = sign_extend; 
+	      2'b11: saida = sign_left;
     endcase
   end
 endmodule

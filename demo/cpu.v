@@ -67,6 +67,7 @@ module cpu (
 
     wire [31:0] Xtend_16x32_out;
 
+    //check
     Registrador PC_(
         clk,
         reset,
@@ -75,6 +76,7 @@ module cpu (
         PC_out
     );
 
+    //check
     Memoria MEM_(
         Mux_iord_out,
         clk, 
@@ -83,6 +85,7 @@ module cpu (
         MEM_to_IR
     );
 
+    //check
     MUX_Iord MUX_IORD_(
         Iord_sel,
         PC_out,

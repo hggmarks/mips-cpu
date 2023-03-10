@@ -32,7 +32,7 @@ parameter ST_COMMON_2 = 7'd3;
 //parameter ST_ADDI = 7'd4;
 
 parameter ST_ADD_1 = 7'd4;
-parameter ST_ARIT_COMMOM = 7'd5; // comum a maioria das aritmeticas
+
 parameter ST_ADDI = 7'd6;
 
 parameter ST_RESET = 7'd0;
@@ -75,6 +75,7 @@ parameter OP_ADDI = 7'h8;
             ST_COMMON_0: begin
                 muxIord <= 3'b000;
                 memRW <= 1'b0;
+		ABWrite <= 1'b1;
             end
             ST_COMMON_1: begin
                 muxAluSrcA <= 3'b000;
@@ -106,10 +107,6 @@ parameter OP_ADDI = 7'h8;
                 muxRegDst <= 3'b010;
                 RegWrite <= 1'b1;
                 muxMemToReg <= 3'b110;
-            end
-
-            ST_ARIT_COMMOM: begin
-
             end
 
             ST_WAIT:
@@ -157,8 +154,6 @@ parameter OP_ADDI = 7'h8;
                 ST_ADD_1:
                     STATE <= ST_COMMON_0;
                 
-                ST_ARIT_COMMOM:
-                    STATE <= ST_WAIT;
 
                 ST_ADDI:
                     STATE <= ST_COMMON_0;
