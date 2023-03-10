@@ -1,0 +1,8 @@
+module shift_left_2_alu(
+    input wire[25:0] data_in, // Vem da instrução
+    output wire[27:0] data_concat // vai pro multiplexador que atualiza o PC(antes de concatenar)
+);
+
+    assign data_concat = data_in << 2; // desloca 2 bits para a esquerda
+
+endmodule
