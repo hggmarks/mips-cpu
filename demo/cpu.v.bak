@@ -72,12 +72,10 @@ module cpu (
 
     wire [31:0] concat_sl_26x28_out;
 
-    wire [31:0] shift_left_2_alu_out;
-
     Registrador PC_(
         clk,
         reset,
-        PC_w || igual,
+        PC_w,
         PC_source_out,
         PC_out
     );
@@ -167,7 +165,7 @@ module cpu (
     MUX_ALUSrc_B MUX_ALUSrc_B_(
         Reg_B_out,
         Xtend_16x32_out,
-        shift_left_2_alu_out,
+        32'd0,
         Mux_alusrc_B_sel,
         Mux_alusrc_B_out
     );
@@ -198,7 +196,6 @@ module cpu (
 	reset,
 	EPC_w,
 	ALU_result,
-    EPC_out
 );
 
     MUX_PC PC_SOURCE_(
@@ -207,7 +204,7 @@ module cpu (
         ALU_result,
         ALU_out,
         PC_out,
-        32'd0,
+        1'd0,
         EPC_out,
         concat_sl_26x28_out,
         PC_source_out
@@ -216,11 +213,6 @@ module cpu (
     sign_extend_16x32 XTEND_16x32_(
         Imediate,
         Xtend_16x32_out
-    );
-
-    shift_left_2_alu SHIFT_LEFT2_ALU_(
-        Xtend_16x32_out,
-        shift_left_2_alu_out
     );
 
     concat_sl_26x28 CONCAT_SL_26X28_(
