@@ -70,7 +70,7 @@ module cpu (
 
     wire [31:0] Xtend_16x32_out;
 
-    wire [31:0] concat_sl_26x28_out;
+    wire [31:0] Xtend_1x32_out;
 
     wire [31:0] shift_left_2_alu_out;
 
@@ -82,6 +82,7 @@ module cpu (
         PC_out
     );
 
+    //check
     Memoria MEM_(
         Mux_iord_out,
         clk, 
@@ -90,6 +91,7 @@ module cpu (
         MEM_to_IR
     );
 
+    //check
     MUX_Iord MUX_IORD_(
         Iord_sel,
         PC_out,
@@ -123,8 +125,8 @@ module cpu (
         1'd0,
         1'd0,
         1'd0,
-        1'd0,
-        ALU_result, //ALU_out,
+        Xtend_1x32_out,
+        ALU_result,//ALU_out,
         Mem_to_reg_out
     );
 
@@ -147,6 +149,7 @@ module cpu (
         RB_to_A,
         Reg_A_out
     );
+
 
     Registrador REG_B_(
         clk,
@@ -218,6 +221,11 @@ module cpu (
         Xtend_16x32_out
     );
 
+    Sign_extend1x32 XTEND_1x32_(
+        menor,
+        Xtend_1x32_out
+    );
+
     shift_left_2_alu SHIFT_LEFT2_ALU_(
         Xtend_16x32_out,
         shift_left_2_alu_out
@@ -235,20 +243,15 @@ module cpu (
         clk,
         reset,
         overflow,
-        negativo,
-        zero,
-        igual,
-        maior,
-        menor,
         OPCODE,
         Imediate[5:0], //funct 
         PC_w,
         MEM_rw,
         IR_w,
         REG_w,
-	AB_w,
-	ALU_OUT_w,
-	EPC_w,
+	    AB_w,
+	    ALU_OUT_w,
+	    EPC_w,
         ALU_c,
         Iord_sel,
         Mux_alusrc_A_sel,
@@ -257,5 +260,6 @@ module cpu (
         Mem_to_reg_sel,
         PC_source_sel,
         reset 
-    ); 
+    );
+    
 endmodule

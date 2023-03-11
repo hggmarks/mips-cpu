@@ -1,4 +1,4 @@
-module MUX_PC(
+module PC(
     input wire [2:0] sel,
     input wire[31:0] MenData,
     input wire[31:0] result,
