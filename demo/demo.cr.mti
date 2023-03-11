@@ -1,11 +1,4 @@
-C:/Users/Hugo/Projects/mips-cpu/demo/MUX_MenData.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_MenData.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_MenData
-
-Top level modules:
-	MUX_MenData
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/ula32.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/ula32.vhd
+C:/Users/italo/Downloads/infrahw/demo/ula32.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/italo/Downloads/infrahw/demo/ula32.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -14,35 +7,191 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Ula32
 -- Compiling architecture behavioral of Ula32
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_16x32.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_16x32.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sign_extend_16x32
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/ula32.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/ula32.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Ula32
+-- Compiling architecture behavioral of Ula32
 
-Top level modules:
-	sign_extend_16x32
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_ALUSrc_A.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_ALUSrc_A.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_ALUSrc_A
-
-Top level modules:
-	MUX_ALUSrc_A
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_PC.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_PC.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_PC
-
-Top level modules:
-	MUX_PC
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/store_size_ss.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/store_size_ss.v
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/store_size_ss.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/store_size_ss.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module store_size_ss
 
 Top level modules:
 	store_size_ss
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/RegDesloc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/RegDesloc.vhd
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_PC
+
+Top level modules:
+	MUX_PC
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/store_size_ss.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/store_size_ss.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module store_size_ss
+
+Top level modules:
+	store_size_ss
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_PC.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_PC.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_PC
+
+Top level modules:
+	MUX_PC
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_32x5.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_32x5.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlog8dyzic".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_32x5.v(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_write_data.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_write_data.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlog1e1bfk".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_write_data.v(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_8x32_MenData.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_8x32_MenData.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogcxk41b".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_8x32_MenData.v(1): Verilog Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/load_size_ls.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/load_size_ls.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module load_size_ls
+
+Top level modules:
+	load_size_ls
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/load_size_ls.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/load_size_ls.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module load_size_ls
+
+Top level modules:
+	load_size_ls
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/shift_left_2_alu.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/shift_left_2_alu.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shift_left_2_alu
+
+Top level modules:
+	shift_left_2_alu
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/Registrador.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/italo/Downloads/infrahw/demo/Registrador.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Registrador
+-- Compiling architecture behavioral_arch of Registrador
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Registrador.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Registrador.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Registrador
+-- Compiling architecture behavioral_arch of Registrador
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/shift_left_2_alu.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/shift_left_2_alu.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shift_left_2_alu
+
+Top level modules:
+	shift_left_2_alu
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_write_data
+
+Top level modules:
+	MUX_write_data
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/ula32.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/ula32.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vcom-9) Problem while writing token file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vcom0bi6fz".
+** Note: C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/ula32.vhd(57): VHDL Compiler exiting
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_write_data.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_write_data.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_write_data
+
+Top level modules:
+	MUX_write_data
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_16x32.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_16x32.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlog6095hy".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_16x32.v(1): Verilog Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/sign_extend_8x32_pc.v {2 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/sign_extend_8x32_pc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_8x32_pc
+** Warning: C:/Users/italo/Downloads/infrahw/demo/sign_extend_8x32_pc.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+
+Top level modules:
+	sign_extend_8x32_pc
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_pc.v {2 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_pc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_8x32_pc
+** Warning: C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_pc.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+
+Top level modules:
+	sign_extend_8x32_pc
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_ALUSrc_B.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_ALUSrc_B.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogyx166x".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_ALUSrc_B.v(1): Verilog Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/Instr_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/italo/Downloads/infrahw/demo/Instr_Reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Instr_Reg
+-- Compiling architecture behavioral_arch of Instr_Reg
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Instr_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Instr_Reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Instr_Reg
+-- Compiling architecture behavioral_arch of Instr_Reg
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_MenData.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_MenData.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_MenData
+
+Top level modules:
+	MUX_MenData
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_MenData.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_MenData.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_MenData
+
+Top level modules:
+	MUX_MenData
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/RegDesloc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/italo/Downloads/infrahw/demo/RegDesloc.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -51,7 +200,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity RegDesloc
 -- Compiling architecture behavioral_arch of RegDesloc
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Banco_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Banco_reg.vhd
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/Banco_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/italo/Downloads/infrahw/demo/Banco_reg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -60,14 +209,32 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Banco_reg
 -- Compiling architecture behavioral_arch of Banco_reg
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_ALUSrc_B.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_ALUSrc_B.v
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Banco_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Banco_reg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Banco_reg
+-- Compiling architecture behavioral_arch of Banco_reg
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/RegDesloc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/RegDesloc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RegDesloc
+-- Compiling architecture behavioral_arch of RegDesloc
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_SR_A.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_SR_A.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_ALUSrc_B
+-- Compiling module MUX_SR_A
 
 Top level modules:
-	MUX_ALUSrc_B
+	MUX_SR_A
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Memoria.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Memoria.vhd
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/Memoria.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/italo/Downloads/infrahw/demo/Memoria.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Compiling package ram_constants
@@ -79,121 +246,311 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Memoria
 -- Compiling architecture behavioral_arch of Memoria
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_SR_A.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_SR_A.v
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_SR_A.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_SR_A.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_SR_A
 
 Top level modules:
 	MUX_SR_A
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/concat_sl_26x28.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/concat_sl_26x28.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module concat_sl_26x28
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Memoria.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Memoria.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+-- Compiling package ram_constants
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package LPM_COMPONENTS
+-- Loading package ram_constants
+-- Compiling entity Memoria
+-- Compiling architecture behavioral_arch of Memoria
 
-Top level modules:
-	concat_sl_26x28
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_SR_B.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_SR_B.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_SR_B
-
-Top level modules:
-	MUX_SR_B
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_Iord.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_Iord.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_Iord
-
-Top level modules:
-	MUX_Iord
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/control_unit.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/control_unit.v
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/control_unit.v {1 {vlog -work work -stats=none {C:\Users\Hugo\Desktop\mips-cpu\demo\control_unit.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module control_unit
 
 Top level modules:
 	control_unit
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/load_size_ls.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/load_size_ls.v
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_8x32_pc.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_8x32_pc.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module load_size_ls
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogej8ed6".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/sign_extend_8x32_pc.v(1): Verilog Compiler exiting
 
-Top level modules:
-	load_size_ls
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/sign_32x5.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/sign_32x5.v
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/sign_32x5.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/sign_32x5.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module sign_32x5
 
 Top level modules:
 	sign_32x5
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/shift_left_2_alu.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/shift_left_2_alu.v
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/sign_32x5.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/sign_32x5.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module shift_left_2_alu
+-- Compiling module sign_32x5
 
 Top level modules:
-	shift_left_2_alu
+	sign_32x5
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Registrador.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Registrador.vhd
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Instr_Reg.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Instr_Reg.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity Registrador
--- Compiling architecture behavioral_arch of Registrador
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vcom-9) Problem while writing token file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vcomy54w6j".
+** Note: C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Instr_Reg.vhd(37): VHDL Compiler exiting
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_MenData.v {2 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_MenData.v
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_MenData.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_MenData.v}
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sign_extend_8x32_MenData
-** Warning: C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_MenData.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlog3yih5y".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_MenData.v(1): Verilog Compiler exiting
 
-Top level modules:
-	sign_extend_8x32_MenData
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_write_data.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_write_data.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_write_data
-
-Top level modules:
-	MUX_write_data
-
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Sign_extend1x32.v {2 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Sign_extend1x32.v
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/Sign_extend1x32.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/Sign_extend1x32.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Sign_extend1x32
-** Warning: C:/Users/Hugo/Projects/mips-cpu/demo/Sign_extend1x32.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 
 Top level modules:
 	Sign_extend1x32
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_pc.v {2 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_pc.v
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Sign_extend1x32.v {2 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Sign_extend1x32.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sign_extend_8x32_pc
-** Warning: C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_pc.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+-- Compiling module Sign_extend1x32
+** Warning: C:/Users/Hugo/Desktop/mips-cpu/demo/Sign_extend1x32.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 
 Top level modules:
-	sign_extend_8x32_pc
+	Sign_extend1x32
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/cpu.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/cpu.v
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Banco_reg.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Banco_reg.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vcom-9) Problem while writing token file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vcomj24r21".
+** Note: C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Banco_reg.vhd(64): VHDL Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/RegDesloc.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/RegDesloc.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vcom-9) Problem while writing token file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vcomhfw3z2".
+** Note: C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/RegDesloc.vhd(73): VHDL Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/cpu.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/cpu.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module cpu
 
 Top level modules:
 	cpu
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_write_register.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_write_register.v
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/cpu.v {1 {vlog -work work -stats=none {C:\Users\Hugo\Desktop\mips-cpu\demo\cpu.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module cpu
+
+Top level modules:
+	cpu
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/load_size_ls.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/load_size_ls.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vloggv79v5".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/load_size_ls.v(1): Verilog Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/sign_extend_16x32.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/sign_extend_16x32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_16x32
+
+Top level modules:
+	sign_extend_16x32
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_ALUSrc_A.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_ALUSrc_A.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_ALUSrc_A
+
+Top level modules:
+	MUX_ALUSrc_A
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_ALUSrc_A.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_ALUSrc_A.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_ALUSrc_A
+
+Top level modules:
+	MUX_ALUSrc_A
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_16x32.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_16x32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_16x32
+
+Top level modules:
+	sign_extend_16x32
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/shift_left_2_alu.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/shift_left_2_alu.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlog1jyhsk".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/shift_left_2_alu.v(1): Verilog Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_SR_B.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_SR_B.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_SR_B
+
+Top level modules:
+	MUX_SR_B
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_Iord.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_Iord.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_Iord
+
+Top level modules:
+	MUX_Iord
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_Iord.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_Iord.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_Iord
+
+Top level modules:
+	MUX_Iord
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_SR_B.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_SR_B.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_SR_B
+
+Top level modules:
+	MUX_SR_B
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Sign_extend1x32.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Sign_extend1x32.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogvch1sw".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Sign_extend1x32.v(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/cpu.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/cpu.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogsigqk7".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/cpu.v(2): Verilog Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/sign_extend_8x32_MenData.v {2 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/sign_extend_8x32_MenData.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_8x32_MenData
+** Warning: C:/Users/italo/Downloads/infrahw/demo/sign_extend_8x32_MenData.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+
+Top level modules:
+	sign_extend_8x32_MenData
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_MenData.v {2 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_MenData.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_8x32_MenData
+** Warning: C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_MenData.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+
+Top level modules:
+	sign_extend_8x32_MenData
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/store_size_ss.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/store_size_ss.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogg60s26".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/store_size_ss.v(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_SR_A.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_SR_A.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogv8qqiv".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_SR_A.v(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/control_unit.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/control_unit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlog4at5hx".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/control_unit.v(1): Verilog Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_ALUSrc_B.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_ALUSrc_B.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_ALUSrc_B
+
+Top level modules:
+	MUX_ALUSrc_B
+
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_ALUSrc_B.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_ALUSrc_B.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_ALUSrc_B
+
+Top level modules:
+	MUX_ALUSrc_B
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Registrador.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Registrador.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+-- Loading package STANDARD
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vcom-9) Problem while writing token file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vcomfz03si".
+** Note: C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Registrador.vhd(49): VHDL Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_write_register.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_write_register.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogyzk13x".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_write_register.v(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_ALUSrc_A.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_ALUSrc_A.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlog2h56xd".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_ALUSrc_A.v(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_PC.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_PC.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogtsz2vb".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_PC.v(1): Verilog Compiler exiting
+
+} {} {}} C:/Users/italo/Downloads/infrahw/demo/MUX_write_register.v {1 {vlog -work work -stats=none C:/Users/italo/Downloads/infrahw/demo/MUX_write_register.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_write_register
 
 Top level modules:
 	MUX_write_register
 
-} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Instr_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Instr_Reg.vhd
+} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_write_register.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_write_register.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_write_register
+
+Top level modules:
+	MUX_write_register
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Memoria.vhd} {0 {vcom -work work -2002 -explicit -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Memoria.vhd}
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Compiling entity Instr_Reg
--- Compiling architecture behavioral_arch of Instr_Reg
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vcom-9) Problem while writing token file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vcoma70zm0".
+** Note: C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/Memoria.vhd(47): VHDL Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_Iord.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_Iord.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogrt68zy".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_Iord.v(1): Verilog Compiler exiting
+
+} {} {}} {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_SR_B.v} {0 {vlog -work work -stats=none {C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_SR_B.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+init_dbinfo() DATABASE ERROR: (sqlite3_open C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_lib.qdb): unable to open database file
+mtilibWrite(): INTERNAL ERROR: Unexpected null object encountered
+** Fatal: (vlog-9) Problem while writing internal20180930A file "C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/work/_temp/vlogf1z9zj".
+C:/Users/italo/OneDrive/햞ea de Trabalho/infrahw/demo/MUX_SR_B.v(1): Verilog Compiler exiting
 
 } {} {}}

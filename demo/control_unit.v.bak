@@ -2,11 +2,6 @@ module control_unit (
     input wire clk,
     input wire rst,
     input wire overflow,
-    input wire negativo,
-    input wire zero,
-    input wire igual,
-    input wire maior,
-    input wire menor,
     input wire [5:0] opcode,
     input wire [5:0] funct,
     output reg PCWrite,
@@ -17,8 +12,8 @@ module control_unit (
     output reg AluOutWrite,
     output reg [2:0] aluOP,
     output reg [2:0] muxIord,
-    output reg [1:0] muxAluSrcA,
-    output reg [1:0] muxAluSrcB,
+    output reg [2:0] muxAluSrcA,
+    output reg [2:0] muxAluSrcB,
     output reg [2:0] muxRegDst,
     output reg [2:0] muxMemToReg,
     output reg [2:0] muxPCSource,
@@ -31,23 +26,20 @@ reg [5:0] COUNTER;
 reg [6:0] STATE;
 
 parameter ST_WAIT = 7'd127;
-parameter ST_RESET = 7'd0;
-
 parameter ST_COMMON_0 = 7'd1;
 parameter ST_COMMON_1 = 7'd2;
 parameter ST_COMMON_2 = 7'd3;
-parameter ST_COMMON_WAIT = 7'd4;
-parameter ST_ADD = 7'd5;
+//parameter ST_ADDI = 7'd4;
 
-parameter ST_JR = 7'd15;
+parameter ST_ADD_1 = 7'd4;
 
+parameter ST_ADDI = 7'd6;
 
-parameter ST_ADDI = 7'd6; //aumentar esse valor depois de adicionar 
-
+parameter ST_RESET = 7'd0;
 
 parameter TYPE_R = 7'h0;
-    parameter OP_ADD = 7'h20;
-    parameter OP_JR = 7'h8; //igual ao addi mas sao campos diferentes (funct x opcode)
+
+parameter OP_ADD = 7'h20;
 parameter OP_ADDI = 7'h8;
 
     initial begin
@@ -66,8 +58,8 @@ parameter OP_ADDI = 7'h8;
         AluOutWrite <= 1'b0;
         aluOP <= 3'b000;
         muxIord <= 3'b000;
-        muxAluSrcA <= 2'b00;
-        muxAluSrcB <= 2'b00;
+        muxAluSrcA <= 3'b000;
+        muxAluSrcB <= 3'b000;
         muxRegDst <= 3'b000;
         muxMemToReg <= 3'b000;
         muxPCSource <= 3'b000;
@@ -75,6 +67,7 @@ parameter OP_ADDI = 7'h8;
 
         case (STATE)
             ST_RESET: begin
+
                 RegWrite <= 1'b1; ///
                 muxRegDst <= 3'b100;   ///
                 muxMemToReg <= 3'b000; ///
@@ -82,48 +75,40 @@ parameter OP_ADDI = 7'h8;
             ST_COMMON_0: begin
                 muxIord <= 3'b000;
                 memRW <= 1'b0;
+		ABWrite <= 1'b1;
             end
             ST_COMMON_1: begin
-                muxAluSrcA <= 2'b00;
-                muxAluSrcB <= 2'b01;  // 4 do pc + 4
+                muxAluSrcA <= 3'b000;
+                muxAluSrcB <= 3'b001;
                 aluOP <= 3'b001;
                 muxPCSource <= 3'b001;
                 PCWrite <= 1'b1;
                 IRWrite <= 1'b1;
             end
-            ST_COMMON_2: begin
-		        ABWrite <= 1'b1;
-                muxAluSrcA <= 2'b00;
-                muxAluSrcB <= 2'b11; //prevendo um branch
+            ST_COMMON_1: begin
+                muxAluSrcA <= 3'b000;
+                muxAluSrcB <= 3'b011;
                 aluOP <= 3'b001;
             end
 
             ST_ADDI: begin
-                muxAluSrcA <= 2'b10;
-                muxAluSrcB <= 2'b10; // pegando imediato do sign xtend
+                muxAluSrcA <= 3'b010;
+                muxAluSrcB <= 3'b010;
                 aluOP <= 3'b001;
                 muxRegDst <= 3'b000;
                 RegWrite <= 1'b1;
                 muxMemToReg <= 3'b110;
             end
 
-            ST_ADD: begin
-                muxAluSrcA <= 2'b10;
-                muxAluSrcB <= 2'b00; // deveria voltar a pegar do REG_B_
+            ST_ADD_1: begin
+                muxAluSrcA <= 3'b010;
+                muxAluSrcB <= 3'b000;
                 aluOP <= 3'b001;
                 muxRegDst <= 3'b010;
                 RegWrite <= 1'b1;
                 muxMemToReg <= 3'b110;
             end
 
-            ST_JR: begin
-                muxAluSrcA <= 2'b10;
-                aluOP <= 3'b000;
-                muxPCSource <= 3'b001; // era p ser 010 mas prefiro pegar direto do result
-                PCWrite <= 1'b1;
-            end
-
-            ST_COMMON_WAIT,
             ST_WAIT:
                 rstOut <= 3'b000;
 
@@ -147,22 +132,18 @@ parameter OP_ADDI = 7'h8;
                     STATE <= ST_COMMON_1;
                 
                 ST_COMMON_1:
-                    STATE <= ST_COMMON_WAIT;
-
-                ST_COMMON_WAIT:
                     STATE <= ST_COMMON_2;
                 
                 ST_COMMON_2:
+
                     case (opcode) 
 
                         TYPE_R: 
                             case (funct)
 
                                 OP_ADD:
-                                    STATE <= ST_ADD;
+                                    STATE <= ST_ADD_1;
 
-                                OP_JR:
-                                    STATE <= ST_JR;
                                 
                             endcase
                         OP_ADDI:
@@ -170,15 +151,13 @@ parameter OP_ADDI = 7'h8;
                             STATE <= ST_ADDI;
                         
                     endcase
-                ST_ADD:
+                ST_ADD_1:
                     STATE <= ST_COMMON_0;
                 
 
                 ST_ADDI:
                     STATE <= ST_COMMON_0;
-
-                ST_JR:
-                    STATE <= ST_COMMON_2;
+                
                 
                 ST_WAIT:
                     STATE <= ST_COMMON_0;

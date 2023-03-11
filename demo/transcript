@@ -1,0 +1,2639 @@
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v failed with 1 errors.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful with warnings.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 1 failed with 1 error.
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful with warnings.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful with warnings.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# vsim -gui work.cpu 
+# Start time: 16:08:56 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'sign_extend'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 193
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v failed with 1 errors.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful with warnings.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 1 failed with 1 error.
+restart
+vsim -gui work.cpu
+# End time: 16:23:23 on Mar 11,2023, Elapsed time: 0:14:27
+# Errors: 11, Warnings: 29
+# vsim -gui work.cpu 
+# Start time: 16:23:23 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'sign_extend'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 193
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'sign_extend'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 116
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 193
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 193
+add wave -position 2 sim:/cpu/MEM_TO_REG_/*
+add wave -position 2 sim:/cpu/MEM_TO_REG_/*
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful with warnings.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/italo/Downloads/infrahw/demo/wave.do
+wave editwrite -file C:/Users/italo/Downloads/infrahw/demo/wave.do -append
+vsim -gui work.cpu
+# End time: 16:37:12 on Mar 11,2023, Elapsed time: 0:13:49
+# Errors: 11, Warnings: 23
+# vsim -gui work.cpu 
+# Start time: 16:37:12 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading work.registrador(behavioral_arch)
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+vsim -gui work.cpu
+# End time: 16:40:33 on Mar 11,2023, Elapsed time: 0:03:21
+# Errors: 0, Warnings: 7
+# vsim -gui work.cpu 
+# Start time: 16:40:33 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position 17  sim:/cpu/ULA_/Menor
+restart
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/italo/Downloads/infrahw/demo/wave.do
+wave editwrite -file C:/Users/italo/Downloads/infrahw/demo/wave.do -append
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 16:46:56 on Mar 11,2023, Elapsed time: 0:06:23
+# Errors: 11, Warnings: 22
+# vsim -gui work.cpu 
+# Start time: 16:46:56 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 16:51:58 on Mar 11,2023, Elapsed time: 0:05:02
+# Errors: 11, Warnings: 22
+# vsim -gui work.cpu 
+# Start time: 16:51:58 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 16:52:18 on Mar 11,2023, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 8
+# vsim -gui work.cpu 
+# Start time: 16:52:19 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+vsim -gui work.cpu
+# End time: 17:06:36 on Mar 11,2023, Elapsed time: 0:14:17
+# Errors: 11, Warnings: 21
+# vsim -gui work.cpu 
+# Start time: 17:06:36 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+vsim -gui work.cpu
+# End time: 17:06:50 on Mar 11,2023, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 8
+# vsim -gui work.cpu 
+# Start time: 17:06:50 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:09:29 on Mar 11,2023, Elapsed time: 0:02:39
+# Errors: 11, Warnings: 23
+# vsim -gui work.cpu 
+# Start time: 17:09:29 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:15:05 on Mar 11,2023, Elapsed time: 0:05:36
+# Errors: 11, Warnings: 22
+# vsim -gui work.cpu 
+# Start time: 17:15:05 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:15:20 on Mar 11,2023, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 8
+# vsim -gui work.cpu 
+# Start time: 17:15:20 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:17:33 on Mar 11,2023, Elapsed time: 0:02:13
+# Errors: 11, Warnings: 22
+# vsim -gui work.cpu 
+# Start time: 17:17:33 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:23:06 on Mar 11,2023, Elapsed time: 0:05:33
+# Errors: 11, Warnings: 22
+# vsim -gui work.cpu 
+# Start time: 17:23:06 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:23:21 on Mar 11,2023, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 8
+# vsim -gui work.cpu 
+# Start time: 17:23:21 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:28:45 on Mar 11,2023, Elapsed time: 0:05:24
+# Errors: 11, Warnings: 22
+# vsim -gui work.cpu 
+# Start time: 17:28:45 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:29:00 on Mar 11,2023, Elapsed time: 0:00:15
+# Errors: 0, Warnings: 8
+# vsim -gui work.cpu 
+# Start time: 17:29:00 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:41:06 on Mar 11,2023, Elapsed time: 0:12:06
+# Errors: 0, Warnings: 8
+# vsim -gui work.cpu 
+# Start time: 17:41:06 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# Compile of Banco_reg.vhd was successful.
+# Compile of control_unit.v was successful.
+# Compile of cpu.v was successful.
+# Compile of Instr_Reg.vhd was successful.
+# Compile of load_size_ls.v was successful.
+# Compile of Memoria.vhd was successful.
+# Compile of MUX_ALUSrc_A.v was successful.
+# Compile of MUX_ALUSrc_B.v was successful.
+# Compile of MUX_Iord.v was successful.
+# Compile of MUX_MenData.v was successful.
+# Compile of MUX_PC.v was successful.
+# Compile of MUX_SR_A.v was successful.
+# Compile of MUX_SR_B.v was successful.
+# Compile of MUX_write_data.v was successful.
+# Compile of MUX_write_register.v was successful.
+# Compile of RegDesloc.vhd was successful.
+# Compile of Registrador.vhd was successful.
+# Compile of shift_left_2_alu.v was successful.
+# Compile of sign_32x5.v was successful.
+# Compile of sign_extend_8x32_MenData.v was successful with warnings.
+# Compile of sign_extend_8x32_pc.v was successful with warnings.
+# Compile of sign_extend_16x32.v was successful.
+# Compile of Sign_extend1x32.v was successful.
+# Compile of store_size_ss.v was successful.
+# Compile of ula32.vhd was successful.
+# 25 compiles, 0 failed with no errors.
+vsim -gui work.cpu
+# End time: 17:41:22 on Mar 11,2023, Elapsed time: 0:00:16
+# Errors: 0, Warnings: 8
+# vsim -gui work.cpu 
+# Start time: 17:41:22 on Mar 11,2023
+# Loading work.cpu
+# Loading work.MUX_Iord
+# Loading work.MUX_write_register
+# Loading work.MUX_write_data
+# Loading work.MUX_ALUSrc_A
+# Loading work.MUX_ALUSrc_B
+# Loading work.MUX_PC
+# Loading work.sign_extend_16x32
+# Loading work.Sign_extend1x32
+# Loading work.control_unit
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.registrador(behavioral_arch)
+# Loading ieee.numeric_std(body)
+# Loading lpm.lpm_components
+# Loading work.ram_constants
+# Loading work.memoria(behavioral_arch)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading lpm.lpm_common_conversion(body)
+# Loading lpm.lpm_device_families(body)
+# Loading lpm.lpm_ram_dq(lpm_syn)
+# Loading work.instr_reg(behavioral_arch)
+# Loading work.banco_reg(behavioral_arch)
+# Loading work.ula32(behavioral)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'shift_reg'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'lo'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'hi'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(6).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'load_size'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_write_data.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_TO_REG_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 118
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'ls'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'epc'. The port definition is at: C:/Users/italo/Downloads/infrahw/demo/MUX_PC.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/PC_SOURCE_ File: C:/Users/italo/Downloads/infrahw/demo/cpu.v Line: 195
+do C:/Users/italo/Downloads/infrahw/demo/wave.do
+# .main_pane.wave.interior.cs.body.pw.wf
+# Editable Wave items are not compatible with the wave window's standard undo-redo.  Standard undo-redo has been disabled.
+# 1
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/REG_BASE_
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Three
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_Two
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM_plus_One
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: Unknown intended_device_family UNUSED
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_/MEM
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483648 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483645 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483646 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Error: (vsim-86) Argument value -2147483647 is not in bounds of subtype NATURAL.
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+# ** Warning: NUMERIC_STD.TO_UNSIGNED: vector truncated
+#    Time: 0 ps  Iteration: 1  Instance: /cpu/MEM_
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /cpu/clk "Time value must be greater than "now": 4000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /cpu/reset ""
+run
+run
+# 
+# Internal Error: In tclprim_ApplyStimulus for /cpu/clk "Time value must be greater than "now": 4000 ps
+# ** UI-Msg: (vsim-4004) The -cancel option requires a time period argument.
+# Usage: force [-deposit | -drive | -freeze] [-cancel <period>] [-repeat <period>] <item_name> <value> [<time>] [, <value> <time> ...]
+# "
+# Internal Error: In tclprim_ApplyStimulus for /cpu/reset ""
+run

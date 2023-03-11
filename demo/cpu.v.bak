@@ -67,9 +67,6 @@ module cpu (
 
     wire [31:0] Xtend_16x32_out;
 
-    wire [31:0] Xtend_1x32_out;
-
-    //check
     Registrador PC_(
         clk,
         reset,
@@ -78,7 +75,6 @@ module cpu (
         PC_out
     );
 
-    //check
     Memoria MEM_(
         Mux_iord_out,
         clk, 
@@ -87,7 +83,6 @@ module cpu (
         MEM_to_IR
     );
 
-    //check
     MUX_Iord MUX_IORD_(
         Iord_sel,
         PC_out,
@@ -121,7 +116,7 @@ module cpu (
         1'd0,
         1'd0,
         1'd0,
-        Xtend_1x32_out,
+        1'd0,
         ALU_result,//ALU_out,
         Mem_to_reg_out
     );
@@ -203,14 +198,9 @@ module cpu (
         PC_source_out
     );
 
-    sign_extend_16x32 XTEND_16x32_(
+    sign_extend_16x32 XTEND_16x32(
         Imediate,
         Xtend_16x32_out
-    );
-
-    Sign_extend1x32 XTEND_1x32_(
-        menor,
-        Xtend_1x32_out
     );
 
     control_unit CONTROL_UNIT_(
