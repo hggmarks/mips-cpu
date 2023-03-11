@@ -43,6 +43,8 @@ module cpu (
     wire [31:0] Mux_alusrc_A_out;
     wire [31:0] Mux_alusrc_B_out;
 
+    wire [31:0] shift_left_2_alu_out;
+
     //Iord
     wire [31:0] Mux_iord_out;
 
@@ -162,7 +164,7 @@ module cpu (
     MUX_ALUSrc_B MUX_ALUSrc_B_(
         Reg_B_out,
         Xtend_16x32_out,
-        32'd0,
+        shift_left_2_alu_out,
         Mux_alusrc_B_sel,
         Mux_alusrc_B_out
     );
@@ -198,6 +200,11 @@ module cpu (
         1'd0,
         concat_sl_26x28_out,
         PC_source_out
+    );
+
+    shift_left_2_alu SHIFT_LEFT2ALU(
+        Xtend_16x32_out,
+        shift_left_2_alu_out
     );
 
     sign_extend_16x32 XTEND_16x32(
