@@ -9,4 +9,3 @@ Made with love and cooperation by a team of heroes:
 - Hugo Felix Marques | [/hggmarks](https://github.com/hggmarks)
 - Italo Andrade | [/AndradeItalo](https://github.com/AndradeItalo)
 - Vitor Leitão | [/VitorLeitao](https://github.com/VitorLeitao)
-

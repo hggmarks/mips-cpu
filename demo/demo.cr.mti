@@ -1,18 +1,11 @@
-C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_MenData.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_MenData.v
+C:/Users/Hugo/Projects/mips-cpu/demo/MUX_MenData.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_MenData.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_MenData
 
 Top level modules:
 	MUX_MenData
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_16x32.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_16x32.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sign_extend_16x32
-
-Top level modules:
-	sign_extend_16x32
-
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/ula32.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/ula32.vhd
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/ula32.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/ula32.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -21,35 +14,35 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Ula32
 -- Compiling architecture behavioral of Ula32
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_ALUSrc_A.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_ALUSrc_A.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_16x32.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_16x32.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_16x32
+
+Top level modules:
+	sign_extend_16x32
+
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_ALUSrc_A.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_ALUSrc_A.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_ALUSrc_A
 
 Top level modules:
 	MUX_ALUSrc_A
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_ALUSrc_B.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_ALUSrc_B.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_ALUSrc_B
-
-Top level modules:
-	MUX_ALUSrc_B
-
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_PC.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_PC.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_PC.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_PC.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_PC
 
 Top level modules:
 	MUX_PC
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/store_size_ss.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/store_size_ss.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/store_size_ss.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/store_size_ss.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module store_size_ss
 
 Top level modules:
 	store_size_ss
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/RegDesloc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/RegDesloc.vhd
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/RegDesloc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/RegDesloc.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -58,7 +51,7 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity RegDesloc
 -- Compiling architecture behavioral_arch of RegDesloc
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Banco_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Banco_reg.vhd
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Banco_reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Banco_reg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -67,7 +60,14 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Banco_reg
 -- Compiling architecture behavioral_arch of Banco_reg
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Memoria.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Memoria.vhd
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_ALUSrc_B.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_ALUSrc_B.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_ALUSrc_B
+
+Top level modules:
+	MUX_ALUSrc_B
+
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Memoria.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Memoria.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Compiling package ram_constants
@@ -79,42 +79,63 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Memoria
 -- Compiling architecture behavioral_arch of Memoria
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_SR_A.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_SR_A.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_SR_A.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_SR_A.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_SR_A
 
 Top level modules:
 	MUX_SR_A
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_Iord.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_Iord.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/concat_sl_26x28.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/concat_sl_26x28.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module MUX_Iord
+-- Compiling module concat_sl_26x28
 
 Top level modules:
-	MUX_Iord
+	concat_sl_26x28
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_SR_B.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_SR_B.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_SR_B.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_SR_B.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_SR_B
 
 Top level modules:
 	MUX_SR_B
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/control_unit.v {1 {vlog -work work -stats=none {C:\Users\Hugo\Desktop\mips-cpu\demo\control_unit.v}
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_Iord.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_Iord.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module MUX_Iord
+
+Top level modules:
+	MUX_Iord
+
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/control_unit.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/control_unit.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module control_unit
 
 Top level modules:
 	control_unit
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/load_size_ls.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/load_size_ls.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/load_size_ls.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/load_size_ls.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module load_size_ls
 
 Top level modules:
 	load_size_ls
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Registrador.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Registrador.vhd
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/sign_32x5.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/sign_32x5.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_32x5
+
+Top level modules:
+	sign_32x5
+
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/shift_left_2_alu.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/shift_left_2_alu.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module shift_left_2_alu
+
+Top level modules:
+	shift_left_2_alu
+
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Registrador.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Registrador.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -122,66 +143,52 @@ Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 
 -- Compiling entity Registrador
 -- Compiling architecture behavioral_arch of Registrador
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/shift_left_2_alu.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/shift_left_2_alu.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_MenData.v {2 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_MenData.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module shift_left_2_alu
+-- Compiling module sign_extend_8x32_MenData
+** Warning: C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_MenData.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 
 Top level modules:
-	shift_left_2_alu
+	sign_extend_8x32_MenData
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/sign_32x5.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/sign_32x5.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sign_32x5
-
-Top level modules:
-	sign_32x5
-
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_write_data.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_write_data.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_write_data.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_write_data.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_write_data
 
 Top level modules:
 	MUX_write_data
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_MenData.v {2 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_MenData.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sign_extend_8x32_MenData
-** Warning: C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_MenData.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
-
-Top level modules:
-	sign_extend_8x32_MenData
-
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_pc.v {2 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_pc.v
-Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
--- Compiling module sign_extend_8x32_pc
-** Warning: C:/Users/Hugo/Desktop/mips-cpu/demo/sign_extend_8x32_pc.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
-
-Top level modules:
-	sign_extend_8x32_pc
-
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Sign_extend1x32.v {2 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Sign_extend1x32.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Sign_extend1x32.v {2 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Sign_extend1x32.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module Sign_extend1x32
-** Warning: C:/Users/Hugo/Desktop/mips-cpu/demo/Sign_extend1x32.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+** Warning: C:/Users/Hugo/Projects/mips-cpu/demo/Sign_extend1x32.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
 
 Top level modules:
 	Sign_extend1x32
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/cpu.v {1 {vlog -work work -stats=none {C:\Users\Hugo\Desktop\mips-cpu\demo\cpu.v}
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_pc.v {2 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_pc.v
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module sign_extend_8x32_pc
+** Warning: C:/Users/Hugo/Projects/mips-cpu/demo/sign_extend_8x32_pc.v(6): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+
+Top level modules:
+	sign_extend_8x32_pc
+
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/cpu.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/cpu.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module cpu
 
 Top level modules:
 	cpu
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_write_register.v {1 {vlog -work work -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/MUX_write_register.v
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/MUX_write_register.v {1 {vlog -work work -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/MUX_write_register.v
 Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
 -- Compiling module MUX_write_register
 
 Top level modules:
 	MUX_write_register
 
-} {} {}} C:/Users/Hugo/Desktop/mips-cpu/demo/Instr_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Desktop/mips-cpu/demo/Instr_Reg.vhd
+} {} {}} C:/Users/Hugo/Projects/mips-cpu/demo/Instr_Reg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/Hugo/Projects/mips-cpu/demo/Instr_Reg.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
 -- Loading package STANDARD
 -- Loading package TEXTIO
