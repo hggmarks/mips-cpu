@@ -14,6 +14,7 @@ module cpu (
     wire [2:0] Mem_to_reg_sel;
     wire [1:0] Mux_alusrc_A_sel;
     wire [1:0] Mux_alusrc_B_sel;
+    wire EPC_w;
 
 
 // Data wires:
@@ -23,6 +24,8 @@ module cpu (
 
     wire [31:0] ALU_out;
     wire [31:0] ALU_result;
+
+    wire [31:0] EPC_out;
 
     wire [31:0] MEM_to_IR;
 
@@ -67,16 +70,18 @@ module cpu (
 
     wire [31:0] Xtend_16x32_out;
 
-    //check
+    wire [31:0] concat_sl_26x28_out;
+
+    wire [31:0] shift_left_2_alu_out;
+
     Registrador PC_(
         clk,
         reset,
-        PC_w,
+        PC_w || igual,
         PC_source_out,
         PC_out
     );
 
-    //check
     Memoria MEM_(
         Mux_iord_out,
         clk, 
@@ -85,7 +90,6 @@ module cpu (
         MEM_to_IR
     );
 
-    //check
     MUX_Iord MUX_IORD_(
         Iord_sel,
         PC_out,
@@ -120,7 +124,7 @@ module cpu (
         1'd0,
         1'd0,
         1'd0,
-        ALU_result,//ALU_out,
+        ALU_result, //ALU_out,
         Mem_to_reg_out
     );
 
@@ -144,7 +148,6 @@ module cpu (
         Reg_A_out
     );
 
-
     Registrador REG_B_(
         clk,
         reset,
@@ -164,7 +167,7 @@ module cpu (
     MUX_ALUSrc_B MUX_ALUSrc_B_(
         Reg_B_out,
         Xtend_16x32_out,
-        32'd0,
+        shift_left_2_alu_out,
         Mux_alusrc_B_sel,
         Mux_alusrc_B_out
     );
@@ -190,26 +193,53 @@ module cpu (
         ALU_out
     );
 
+    Registrador EPC_(
+	clk,
+	reset,
+	EPC_w,
+	ALU_result,
+    EPC_out
+);
+
     MUX_PC PC_SOURCE_(
         PC_source_sel, ///
         MEM_to_IR,
         ALU_result,
         ALU_out,
         PC_out,
-        1'd0,
-        1'd0,
+        32'd0,
+        EPC_out,
+        concat_sl_26x28_out,
         PC_source_out
     );
 
-    sign_extend_16x32 XTEND_16x32(
+    sign_extend_16x32 XTEND_16x32_(
         Imediate,
         Xtend_16x32_out
+    );
+
+    shift_left_2_alu SHIFT_LEFT2_ALU_(
+        Xtend_16x32_out,
+        shift_left_2_alu_out
+    );
+
+    concat_sl_26x28 CONCAT_SL_26X28_(
+        RS,
+        RT,
+        Imediate,
+        PC_out,
+        concat_sl_26x28_out
     );
 
     control_unit CONTROL_UNIT_(
         clk,
         reset,
         overflow,
+        negativo,
+        zero,
+        igual,
+        maior,
+        menor,
         OPCODE,
         Imediate[5:0], //funct 
         PC_w,
@@ -218,6 +248,7 @@ module cpu (
         REG_w,
 	AB_w,
 	ALU_OUT_w,
+	EPC_w,
         ALU_c,
         Iord_sel,
         Mux_alusrc_A_sel,
