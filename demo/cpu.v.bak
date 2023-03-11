@@ -46,8 +46,6 @@ module cpu (
     wire [31:0] Mux_alusrc_A_out;
     wire [31:0] Mux_alusrc_B_out;
 
-    wire [31:0] shift_left_2_alu_out;
-
     //Iord
     wire [31:0] Mux_iord_out;
 
@@ -74,14 +72,10 @@ module cpu (
 
     wire [31:0] concat_sl_26x28_out;
 
-    wire [31:0] Xtend_1x32_out;
-
-    wire [31:0] shift_left_2_alu_out;
-
     Registrador PC_(
         clk,
         reset,
-        PC_w || igual,
+        PC_w,
         PC_source_out,
         PC_out
     );
@@ -127,7 +121,7 @@ module cpu (
         1'd0,
         1'd0,
         1'd0,
-        Xtend_1x32_out,
+        1'd0,
         ALU_result, //ALU_out,
         Mem_to_reg_out
     );
@@ -171,7 +165,7 @@ module cpu (
     MUX_ALUSrc_B MUX_ALUSrc_B_(
         Reg_B_out,
         Xtend_16x32_out,
-        shift_left_2_alu_out,
+        32'd0,
         Mux_alusrc_B_sel,
         Mux_alusrc_B_out
     );
@@ -202,7 +196,6 @@ module cpu (
 	reset,
 	EPC_w,
 	ALU_result,
-    EPC_out
 );
 
     MUX_PC PC_SOURCE_(
@@ -211,30 +204,15 @@ module cpu (
         ALU_result,
         ALU_out,
         PC_out,
-        32'd0,
+        1'd0,
         EPC_out,
         concat_sl_26x28_out,
         PC_source_out
     );
 
-    shift_left_2_alu SHIFT_LEFT2ALU(
-        Xtend_16x32_out,
-        shift_left_2_alu_out
-    );
-
     sign_extend_16x32 XTEND_16x32_(
         Imediate,
         Xtend_16x32_out
-    );
-
-    Sign_extend1x32 XTEND_1x32_(
-        menor,
-        Xtend_1x32_out
-    );
-
-    shift_left_2_alu SHIFT_LEFT2_ALU_(
-        Xtend_16x32_out,
-        shift_left_2_alu_out
     );
 
     concat_sl_26x28 CONCAT_SL_26X28_(
@@ -260,9 +238,9 @@ module cpu (
         MEM_rw,
         IR_w,
         REG_w,
-	    AB_w,
-	    ALU_OUT_w,
-	    EPC_w,
+	AB_w,
+	ALU_OUT_w,
+	EPC_w,
         ALU_c,
         Iord_sel,
         Mux_alusrc_A_sel,
