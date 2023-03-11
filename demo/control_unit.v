@@ -16,6 +16,7 @@ module control_unit (
     output reg ABWrite,
     output reg AluOutWrite,
     output reg EpcWrite,
+    output reg MdrWrite,
     output reg [2:0] aluOP,
     output reg [2:0] muxIord,
     output reg [1:0] muxAluSrcA,
@@ -23,6 +24,9 @@ module control_unit (
     output reg [2:0] muxRegDst,
     output reg [2:0] muxMemToReg,
     output reg [2:0] muxPCSource,
+    output reg [2:0] SRControl,
+    output reg [1:0] SRInputSel,
+    output reg [1:0] SRNumSel,
     output reg rstOut
 );
 

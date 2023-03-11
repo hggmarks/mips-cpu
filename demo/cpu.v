@@ -15,7 +15,13 @@ module cpu (
     wire [1:0] Mux_alusrc_A_sel;
     wire [1:0] Mux_alusrc_B_sel;
     wire EPC_w;
-
+    wire [2:0] ALU_c;
+    wire [2:0] SR_c;
+    wire [2:0] SR_input_sel;
+    wire [2:0] SR_num_sel;
+    wire Mdr_w;
+    wire [1:0] LS_c;
+    wire [1:0] SS_c;
 
 // Data wires:
 
@@ -53,8 +59,10 @@ module cpu (
     wire [31:0] sign_X;
     wire [31:0] sign_left;
 
+    
+
     //ULA_
-    wire [2:0] ALU_c;
+    
     wire overflow;
     wire negativo;
     wire zero;
@@ -72,7 +80,18 @@ module cpu (
 
     wire [31:0] concat_sl_26x28_out;
 
+    wire [31:0] Xtend_1x32_out;
+
     wire [31:0] shift_left_2_alu_out;
+
+    wire [31:0] Mux_SR_input_out;
+    wire [31:0] Mux_SR_num_out;
+    wire [4:0] Xtend_32x5_out;
+    wire [31:0] SR_out;
+    wire Mdr_out;
+    wire [31:0] LS_out;
+
+    wire [31:0] SS_out;
 
     Registrador PC_(
         clk,
@@ -86,7 +105,7 @@ module cpu (
         Mux_iord_out,
         clk, 
         MEM_rw,
-        ALU_out,
+        image.png,
         MEM_to_IR
     );
 
@@ -119,11 +138,11 @@ module cpu (
 
     MUX_write_data MEM_TO_REG_(
         Mem_to_reg_sel,
-        1'd0,
-        1'd0,
-        1'd0,
-        1'd0,
-        1'd0,
+        SR_out,
+        1'd0, //mfodase
+        1'd0, //mflolo
+        LS_out,
+        Xtend_1x32_out,
         ALU_result, //ALU_out,
         Mem_to_reg_out
     );
@@ -199,7 +218,7 @@ module cpu (
 	EPC_w,
 	ALU_result,
     EPC_out
-);
+    );
 
     MUX_PC PC_SOURCE_(
         PC_source_sel, ///
@@ -211,6 +230,11 @@ module cpu (
         EPC_out,
         concat_sl_26x28_out,
         PC_source_out
+    );
+
+    Sign_extend1x32 XTEND_1x32_(
+        menor,
+        Xtend_1x32_out
     );
 
     sign_extend_16x32 XTEND_16x32_(
@@ -231,6 +255,58 @@ module cpu (
         concat_sl_26x28_out
     );
 
+    MUX_SR_A MUX_SR_INPUT_(
+        Xtend_16x32_out,
+        Reg_A_out,
+        Reg_B_out,
+        SR_input_sel,
+        Mux_SR_input_out
+    );
+
+    MUX_SR_B MUX_SR_NUM_(
+        Reg_B_out,
+        Xtend_16x32_out,
+        Mdr_out, //MDR
+        SR_num_sel,
+        Mux_SR_num_out
+    );
+
+    sign_32x5 XTEND_32x5_(
+        Mux_SR_num_out,
+        Xtend_32x5_out
+    );
+
+    RegDesloc SHIFT_REG_(
+        clk,
+        reset,
+        SR_c,
+        Xtend_32x5_out,
+        Mux_SR_input_out,
+        SR_out
+    );
+
+    Registrador MDR_(
+        clk,
+	    reset,
+        Mdr_w,
+        MEM_to_IR,
+        Mdr_out
+    );
+
+    load_size_ls LOAD_SIZE_(
+        LS_c,
+        Mdr_out,
+        MEM_to_IR,
+        LS_out
+    );
+
+    store_size_ss STORE_SIZE_(
+        SS_c,
+        Reg_B_out,
+        Mdr_out,
+        SS_out
+    );
+
     control_unit CONTROL_UNIT_(
         clk,
         reset,
@@ -246,9 +322,9 @@ module cpu (
         MEM_rw,
         IR_w,
         REG_w,
-	AB_w,
-	ALU_OUT_w,
-	EPC_w,
+	    AB_w,
+	    ALU_OUT_w,
+	    EPC_w,
         ALU_c,
         Iord_sel,
         Mux_alusrc_A_sel,
