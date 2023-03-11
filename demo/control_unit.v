@@ -39,6 +39,7 @@ parameter ST_COMMON_1 = 7'd2;
 parameter ST_COMMON_2 = 7'd3;
 parameter ST_COMMON_WAIT = 7'd4;
 parameter ST_ADD = 7'd5;
+
 parameter ST_ADDI = 7'd6; //aumentar esse valor depois de adicionar 
 parameter ST_AND = 7'd7;
 parameter ST_SUB = 7'd8;
@@ -51,17 +52,16 @@ parameter ST_RTE = 7'd23;
 parameter ST_J = 7'd60;
 parameter ST_JAL = 7'd61;
 
-
-
-
 parameter TYPE_R = 7'h0;
     parameter OP_ADD = 7'h20;
     parameter OP_JR = 7'h8; //igual ao addi mas sao campos diferentes (funct x opcode)
+
     parameter OP_RTE = 7'h13;
     parameter OP_AND = 7'h24;
     parameter OP_SUB = 7'h22;
 
 parameter OP_ADDIU = 7'h9;
+
 parameter OP_ADDI = 7'h8;
 
 parameter OP_J = 7'h2;
