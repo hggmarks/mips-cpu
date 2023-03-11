@@ -14,6 +14,7 @@ module cpu (
     wire [2:0] Mem_to_reg_sel;
     wire [1:0] Mux_alusrc_A_sel;
     wire [1:0] Mux_alusrc_B_sel;
+    wire EPC_w;
 
 
 // Data wires:
@@ -23,6 +24,8 @@ module cpu (
 
     wire [31:0] ALU_out;
     wire [31:0] ALU_result;
+
+    wire [31:0] EPC_out;
 
     wire [31:0] MEM_to_IR;
 
@@ -69,11 +72,12 @@ module cpu (
 
     wire [31:0] Xtend_1x32_out;
 
-    //check
+    wire [31:0] shift_left_2_alu_out;
+
     Registrador PC_(
         clk,
         reset,
-        PC_w,
+        PC_w || igual,
         PC_source_out,
         PC_out
     );
@@ -166,7 +170,7 @@ module cpu (
     MUX_ALUSrc_B MUX_ALUSrc_B_(
         Reg_B_out,
         Xtend_16x32_out,
-        32'd0,
+        shift_left_2_alu_out,
         Mux_alusrc_B_sel,
         Mux_alusrc_B_out
     );
@@ -192,14 +196,23 @@ module cpu (
         ALU_out
     );
 
+    Registrador EPC_(
+	clk,
+	reset,
+	EPC_w,
+	ALU_result,
+    EPC_out
+);
+
     MUX_PC PC_SOURCE_(
         PC_source_sel, ///
         MEM_to_IR,
         ALU_result,
         ALU_out,
         PC_out,
-        1'd0,
-        1'd0,
+        32'd0,
+        EPC_out,
+        concat_sl_26x28_out,
         PC_source_out
     );
 
@@ -213,6 +226,19 @@ module cpu (
         Xtend_1x32_out
     );
 
+    shift_left_2_alu SHIFT_LEFT2_ALU_(
+        Xtend_16x32_out,
+        shift_left_2_alu_out
+    );
+
+    concat_sl_26x28 CONCAT_SL_26X28_(
+        RS,
+        RT,
+        Imediate,
+        PC_out,
+        concat_sl_26x28_out
+    );
+
     control_unit CONTROL_UNIT_(
         clk,
         reset,
@@ -223,8 +249,9 @@ module cpu (
         MEM_rw,
         IR_w,
         REG_w,
-	AB_w,
-	ALU_OUT_w,
+	    AB_w,
+	    ALU_OUT_w,
+	    EPC_w,
         ALU_c,
         Iord_sel,
         Mux_alusrc_A_sel,
@@ -233,5 +260,6 @@ module cpu (
         Mem_to_reg_sel,
         PC_source_sel,
         reset 
-    ); 
+    );
+    
 endmodule
