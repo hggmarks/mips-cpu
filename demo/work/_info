@@ -1,0 +1,880 @@
+m255
+K4
+z2
+!s11f MIXED_VERSIONS
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/carva/Documents/GitHub/mips-cpu/demo
+Ebanco_reg
+Z0 w1678578955
+Z1 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 32
+Z4 dC:/Users/carva/Desktop/assteas/demo
+Z5 8C:/Users/carva/Desktop/assteas/demo/Banco_reg.vhd
+Z6 FC:/Users/carva/Desktop/assteas/demo/Banco_reg.vhd
+l0
+L69 1
+V:adHbk0Ym0TAKYW83J5Y[3
+!s100 hZ46CT_BzQl8j]02_Vf=o2
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1678641306
+!i10b 1
+Z9 !s108 1678641305.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/carva/Desktop/assteas/demo/Banco_reg.vhd|
+Z11 !s107 C:/Users/carva/Desktop/assteas/demo/Banco_reg.vhd|
+!i113 1
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
+Abehavioral_arch
+R1
+R2
+R3
+DEx4 work 9 banco_reg 0 22 :adHbk0Ym0TAKYW83J5Y[3
+!i122 32
+l93
+L85 34
+VY7l=BkTbhRVIWWGL4mMo60
+!s100 RmVnX=Z0eZ>VP`R`^LJ]Q1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+vconcat_sl_26x28
+Z14 !s110 1678641307
+!i10b 1
+!s100 ml3LBCOlkzW1FRPkH2JYZ1
+Z15 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^2Z=icbcc0`93gAdFg8Y93
+Z16 VDg1SIo80bB@j0V0VzS_@n1
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/concat_sl_26x28.v
+FC:/Users/carva/Desktop/assteas/demo/concat_sl_26x28.v
+!i122 33
+L0 1 11
+Z17 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z18 !s108 1678641307.000000
+!s107 C:/Users/carva/Desktop/assteas/demo/concat_sl_26x28.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/concat_sl_26x28.v|
+!i113 1
+Z19 o-work work
+Z20 tCvgOpt 0
+vcontrol_unit
+!s110 1678641489
+!i10b 1
+!s100 ec4BXNEf=gOWAPe9>JK[93
+R15
+I53GjneNm3DACiWdR?V0L_1
+R16
+R4
+w1678641483
+8C:\Users\carva\Desktop\assteas\demo\control_unit.v
+FC:\Users\carva\Desktop\assteas\demo\control_unit.v
+!i122 62
+L0 1 609
+R17
+r1
+!s85 0
+31
+!s108 1678641489.000000
+!s107 C:\Users\carva\Desktop\assteas\demo\control_unit.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:\Users\carva\Desktop\assteas\demo\control_unit.v|
+!i113 1
+R19
+R20
+vcpu
+R14
+!i10b 1
+!s100 FlPXlmVI5F=on6ndA1c9;0
+R15
+Ikczi9V;<9^FXQccR@;QX02
+R16
+R4
+w1678640911
+8C:/Users/carva/Desktop/assteas/demo/cpu.v
+FC:/Users/carva/Desktop/assteas/demo/cpu.v
+!i122 35
+L0 1 359
+R17
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/carva/Desktop/assteas/demo/cpu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/cpu.v|
+!i113 1
+R19
+R20
+vdiv
+Z21 !s110 1678641308
+!i10b 1
+!s100 mHT;alK1]2UN7??4lCQ?o1
+R15
+Idn8jX:H1eWVDoJLU<1Cj91
+R16
+R4
+w1678641174
+8C:/Users/carva/Desktop/assteas/demo/div.v
+FC:/Users/carva/Desktop/assteas/demo/div.v
+!i122 36
+L0 5 119
+R17
+r1
+!s85 0
+31
+R18
+!s107 C:/Users/carva/Desktop/assteas/demo/div.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/div.v|
+!i113 1
+R19
+R20
+Einstr_reg
+R0
+R2
+R3
+!i122 37
+R4
+Z22 8C:/Users/carva/Desktop/assteas/demo/Instr_Reg.vhd
+Z23 FC:/Users/carva/Desktop/assteas/demo/Instr_Reg.vhd
+l0
+L42 1
+VAfV1kYS402dnLRiFO;Z7_2
+!s100 _X]FAEHlMn?]L[?c6kUO?1
+R7
+32
+R21
+!i10b 1
+Z24 !s108 1678641308.000000
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/carva/Desktop/assteas/demo/Instr_Reg.vhd|
+Z26 !s107 C:/Users/carva/Desktop/assteas/demo/Instr_Reg.vhd|
+!i113 1
+R12
+R13
+Abehavioral_arch
+R2
+R3
+DEx4 work 9 instr_reg 0 22 AfV1kYS402dnLRiFO;Z7_2
+!i122 37
+l59
+L56 32
+VTD836jU:>9m^d?0ed1C0O3
+!s100 _AcjR?n;fJneQZzaIjJFa3
+R7
+32
+R21
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R12
+R13
+vload_size_ls
+R21
+!i10b 1
+!s100 ?^ALLT3ZRZ;>k50]Q4eE_1
+R15
+IjnaW[KoKjzXNDRXRGQKc12
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/load_size_ls.v
+FC:/Users/carva/Desktop/assteas/demo/load_size_ls.v
+!i122 38
+Z27 L0 1 15
+R17
+r1
+!s85 0
+31
+R24
+!s107 C:/Users/carva/Desktop/assteas/demo/load_size_ls.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/load_size_ls.v|
+!i113 1
+R19
+R20
+Ememoria
+R0
+Z28 DPx4 work 13 ram_constants 0 22 BbIcggj=<H_W75Jb?WIoZ0
+Z29 DPx3 lpm 14 lpm_components 0 22 jlWe>e^2@cAI7EQaRX2E;1
+R1
+R2
+R3
+!i122 39
+R4
+Z30 8C:/Users/carva/Desktop/assteas/demo/Memoria.vhd
+Z31 FC:/Users/carva/Desktop/assteas/demo/Memoria.vhd
+l0
+L67 1
+V<[RFRXeHV^PMOiiinkBoS0
+!s100 __XEo>II7SFLX6Xa7VZA63
+R7
+32
+R21
+!i10b 1
+R24
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/carva/Desktop/assteas/demo/Memoria.vhd|
+Z33 !s107 C:/Users/carva/Desktop/assteas/demo/Memoria.vhd|
+!i113 1
+R12
+R13
+Abehavioral_arch
+R28
+R29
+R1
+R2
+R3
+DEx4 work 7 memoria 0 22 <[RFRXeHV^PMOiiinkBoS0
+!i122 39
+l103
+L79 78
+VR9W83dOfA7lWR9j>i6THA2
+!s100 aLo:Seezh^aEQ@MaJf[__3
+R7
+32
+R21
+!i10b 1
+R24
+R32
+R33
+!i113 1
+R12
+R13
+vmult
+R21
+!i10b 1
+!s100 ;UJ;CnB0oF7k]j2bZ4lfb2
+R15
+IjJ0izYnQESHL__WRZ<1Az1
+R16
+R4
+Z34 w1678641203
+Z35 8C:/Users/carva/Desktop/assteas/demo/mult.v
+Z36 FC:/Users/carva/Desktop/assteas/demo/mult.v
+!i122 40
+L0 5 69
+R17
+r1
+!s85 0
+31
+R24
+Z37 !s107 C:/Users/carva/Desktop/assteas/demo/mult.v|
+Z38 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/mult.v|
+!i113 1
+R19
+R20
+Xmult_v_unit
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R21
+V9KiLAM8?5zc5zWZ;[T7aj2
+r1
+!s85 0
+!i10b 1
+!s100 LB>EEEZ57f`T0]od2@WI>2
+I9KiLAM8?5zc5zWZ;[T7aj2
+!i103 1
+S1
+R4
+R34
+R35
+R36
+!i122 40
+L0 73 0
+R17
+31
+R24
+R37
+R38
+!i113 1
+R19
+R20
+vMUX_ALUSrc_A
+Z39 !s110 1678641311
+!i10b 1
+!s100 nnjlzgZ:L4oU32nm6_WQR3
+R15
+Iaab^kJ<lb1>YoUjTG62bj0
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/MUX_ALUSrc_A.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_ALUSrc_A.v
+!i122 41
+R27
+R17
+r1
+!s85 0
+31
+Z40 !s108 1678641311.000000
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_ALUSrc_A.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_ALUSrc_A.v|
+!i113 1
+R19
+R20
+n@m@u@x_@a@l@u@src_@a
+vMUX_ALUSrc_B
+R39
+!i10b 1
+!s100 `iU:Gh9WP<KI24TWUO[292
+R15
+IPhEF0MVNf1=b8?IOZ04FI2
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/MUX_ALUSrc_B.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_ALUSrc_B.v
+!i122 42
+L0 1 18
+R17
+r1
+!s85 0
+31
+R40
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_ALUSrc_B.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_ALUSrc_B.v|
+!i113 1
+R19
+R20
+n@m@u@x_@a@l@u@src_@b
+vMUX_Iord
+R39
+!i10b 1
+!s100 EJoT6^;kWdo2IYOKIT_XX3
+R15
+I]^ed7@jNV]DOODEIg?c^<2
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/MUX_Iord.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_Iord.v
+!i122 43
+Z41 L0 1 19
+R17
+r1
+!s85 0
+31
+R40
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_Iord.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_Iord.v|
+!i113 1
+R19
+R20
+n@m@u@x_@iord
+vMUX_MenData
+R39
+!i10b 1
+!s100 hk`B1ZM1W@gkdf:DObGDS1
+R15
+IT_fgfd?@V1^C8[bH^GPH=1
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/MUX_MenData.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_MenData.v
+!i122 44
+R41
+R17
+r1
+!s85 0
+31
+R40
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_MenData.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_MenData.v|
+!i113 1
+R19
+R20
+n@m@u@x_@men@data
+vMUX_mfhi
+R39
+!i10b 1
+!s100 1=K7J<`eP0=bPVOQHz]U32
+R15
+IOSd1lbiNCP;AKgzPfaKEk2
+R16
+R4
+w1678636738
+8C:/Users/carva/Desktop/assteas/demo/MUX_mfhi.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_mfhi.v
+!i122 45
+Z42 L0 1 17
+R17
+r1
+!s85 0
+31
+R40
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_mfhi.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_mfhi.v|
+!i113 1
+R19
+R20
+n@m@u@x_mfhi
+vMUX_mflo
+Z43 !s110 1678641312
+!i10b 1
+!s100 ?U[ez`M]7Y`PaPzS<fN3D0
+R15
+InjH>W0iN=POj7:Rk<Vk=I2
+R16
+R4
+w1678637270
+8C:/Users/carva/Desktop/assteas/demo/MUX_mflo.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_mflo.v
+!i122 46
+R42
+R17
+r1
+!s85 0
+31
+R40
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_mflo.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_mflo.v|
+!i113 1
+R19
+R20
+n@m@u@x_mflo
+vMUX_PC
+R43
+!i10b 1
+!s100 YLRI5UT]IB_S<;Gk3AY@l1
+R15
+Ibg_=TgFkVD3MjhIR_D2[e2
+R16
+R4
+w1678639719
+8C:/Users/carva/Desktop/assteas/demo/MUX_PC.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_PC.v
+!i122 47
+Z44 L0 1 24
+R17
+r1
+!s85 0
+31
+Z45 !s108 1678641312.000000
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_PC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_PC.v|
+!i113 1
+R19
+R20
+n@m@u@x_@p@c
+vMUX_SR_A
+R43
+!i10b 1
+!s100 NW_8kmgL_A?PAinmF6RSj0
+R15
+IkzUi]bRm12an6hK3SQMOn3
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/MUX_SR_A.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_SR_A.v
+!i122 48
+L0 1 16
+R17
+r1
+!s85 0
+31
+R45
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_SR_A.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_SR_A.v|
+!i113 1
+R19
+R20
+n@m@u@x_@s@r_@a
+vMUX_SR_B
+R43
+!i10b 1
+!s100 ;VW@8RXg[7HlYN_Y<XHW_2
+R15
+IjiVdPJbiEY=II6]dP77Po0
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/MUX_SR_B.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_SR_B.v
+!i122 49
+R42
+R17
+r1
+!s85 0
+31
+R45
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_SR_B.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_SR_B.v|
+!i113 1
+R19
+R20
+n@m@u@x_@s@r_@b
+vMUX_write_data
+R43
+!i10b 1
+!s100 f0M:mZ@GII9ZMgKOj4D>I3
+R15
+I7dcFQ`A2?T9OARocV<PR=2
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/MUX_write_data.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_write_data.v
+!i122 50
+R44
+R17
+r1
+!s85 0
+31
+R45
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_write_data.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_write_data.v|
+!i113 1
+R19
+R20
+n@m@u@x_write_data
+vMUX_write_register
+R43
+!i10b 1
+!s100 l?m@7bNo86TbQzfnZF@G>0
+R15
+IeN75fWC[_XUGG@SOgH7]12
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/MUX_write_register.v
+FC:/Users/carva/Desktop/assteas/demo/MUX_write_register.v
+!i122 51
+R41
+R17
+r1
+!s85 0
+31
+R45
+!s107 C:/Users/carva/Desktop/assteas/demo/MUX_write_register.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/MUX_write_register.v|
+!i113 1
+R19
+R20
+n@m@u@x_write_register
+Pram_constants
+!i122 39
+R0
+R4
+R30
+R31
+l0
+L47 1
+VBbIcggj=<H_W75Jb?WIoZ0
+!s100 5;`Z:D@MR5CT6j_[c9;6h3
+R7
+32
+R21
+!i10b 1
+R24
+R32
+R33
+!i113 1
+R12
+R13
+Eregdesloc
+R0
+R1
+R2
+R3
+!i122 52
+R4
+Z46 8C:/Users/carva/Desktop/assteas/demo/RegDesloc.vhd
+Z47 FC:/Users/carva/Desktop/assteas/demo/RegDesloc.vhd
+l0
+L80 1
+V4GibeROOKf]^CUjTE67Bo0
+!s100 =0ZG0kkZKT?Zo?iX2R9=P1
+R7
+32
+R43
+!i10b 1
+R45
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/carva/Desktop/assteas/demo/RegDesloc.vhd|
+Z49 !s107 C:/Users/carva/Desktop/assteas/demo/RegDesloc.vhd|
+!i113 1
+R12
+R13
+Abehavioral_arch
+R1
+R2
+R3
+DEx4 work 9 regdesloc 0 22 4GibeROOKf]^CUjTE67Bo0
+!i122 52
+l98
+L93 38
+VDFCTADkAb^4XhT09kD<k32
+!s100 3`2HClJO^bJLd6@PodWh?3
+R7
+32
+R43
+!i10b 1
+R45
+R48
+R49
+!i113 1
+R12
+R13
+Eregistrador
+R0
+R2
+R3
+!i122 53
+R4
+Z50 8C:/Users/carva/Desktop/assteas/demo/Registrador.vhd
+Z51 FC:/Users/carva/Desktop/assteas/demo/Registrador.vhd
+l0
+L53 1
+VD=`aG^VOPEDP69ifb8G;52
+!s100 ^e8=Z<CbNTLXR@XGZJMQo3
+R7
+32
+Z52 !s110 1678641318
+!i10b 1
+Z53 !s108 1678641318.000000
+Z54 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/carva/Desktop/assteas/demo/Registrador.vhd|
+Z55 !s107 C:/Users/carva/Desktop/assteas/demo/Registrador.vhd|
+!i113 1
+R12
+R13
+Abehavioral_arch
+R2
+R3
+DEx4 work 11 registrador 0 22 D=`aG^VOPEDP69ifb8G;52
+!i122 53
+l66
+L65 19
+V<kVfXRZJUh40ja<<lN_3:3
+!s100 EXKKzlBL1ARAk5TCN4`Vg2
+R7
+32
+R52
+!i10b 1
+R53
+R54
+R55
+!i113 1
+R12
+R13
+vshift_left_2_alu
+!s110 1678641330
+!i10b 1
+!s100 4`cH`i?aSF`>mHmK7EaKn0
+R15
+IbT7KgF:c<`3IQJ5>TfC@11
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/shift_left_2_alu.v
+FC:/Users/carva/Desktop/assteas/demo/shift_left_2_alu.v
+!i122 54
+Z56 L0 1 8
+R17
+r1
+!s85 0
+31
+!s108 1678641330.000000
+!s107 C:/Users/carva/Desktop/assteas/demo/shift_left_2_alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/shift_left_2_alu.v|
+!i113 1
+R19
+R20
+vsign_32x5
+Z57 !s110 1678641333
+!i10b 1
+!s100 @E`2>l:McYb2?BJMjzKfh3
+R15
+ISzIG_F=I`<9oODdaN2hTX0
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/sign_32x5.v
+FC:/Users/carva/Desktop/assteas/demo/sign_32x5.v
+!i122 55
+R56
+R17
+r1
+!s85 0
+31
+Z58 !s108 1678641333.000000
+!s107 C:/Users/carva/Desktop/assteas/demo/sign_32x5.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/sign_32x5.v|
+!i113 1
+R19
+R20
+vSign_extend1x32
+R57
+!i10b 1
+!s100 F8MPMU<WDbaPJkEiVNMoP2
+R15
+I9SA[hM0G1O7aX<l?[P87:2
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/Sign_extend1x32.v
+FC:/Users/carva/Desktop/assteas/demo/Sign_extend1x32.v
+!i122 59
+R56
+R17
+r1
+!s85 0
+31
+R58
+!s107 C:/Users/carva/Desktop/assteas/demo/Sign_extend1x32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/Sign_extend1x32.v|
+!i113 1
+R19
+R20
+n@sign_extend1x32
+vsign_extend_16x32
+R57
+!i10b 1
+!s100 9AVYiO^GzGYR^h`k>?Q]A3
+R15
+ICZRdk9[C:3TgZIQ=7P[@62
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/sign_extend_16x32.v
+FC:/Users/carva/Desktop/assteas/demo/sign_extend_16x32.v
+!i122 58
+R56
+R17
+r1
+!s85 0
+31
+R58
+!s107 C:/Users/carva/Desktop/assteas/demo/sign_extend_16x32.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/sign_extend_16x32.v|
+!i113 1
+R19
+R20
+vsign_extend_8x32_MenData
+R57
+!i10b 1
+!s100 kmzHQ;dCc0h@2ZSe@o<791
+R15
+Ih4LXAWNc^2Q]M]jMZznPj1
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/sign_extend_8x32_MenData.v
+FC:/Users/carva/Desktop/assteas/demo/sign_extend_8x32_MenData.v
+!i122 56
+R56
+R17
+r1
+!s85 0
+31
+R58
+!s107 C:/Users/carva/Desktop/assteas/demo/sign_extend_8x32_MenData.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/sign_extend_8x32_MenData.v|
+!i113 1
+R19
+R20
+nsign_extend_8x32_@men@data
+vsign_extend_8x32_pc
+R57
+!i10b 1
+!s100 <aHJWHfLf_Qf7UfCHNG101
+R15
+ImfjgeYcAN0]LGaUgXb^fm0
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/sign_extend_8x32_pc.v
+FC:/Users/carva/Desktop/assteas/demo/sign_extend_8x32_pc.v
+!i122 57
+R56
+R17
+r1
+!s85 0
+31
+R58
+!s107 C:/Users/carva/Desktop/assteas/demo/sign_extend_8x32_pc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/sign_extend_8x32_pc.v|
+!i113 1
+R19
+R20
+vstore_size_ss
+R57
+!i10b 1
+!s100 NlUH9P9;TQ8b>CJnBM_WR3
+R15
+I0[VNGfM5GRi_mbF;ZGdZG3
+R16
+R4
+R0
+8C:/Users/carva/Desktop/assteas/demo/store_size_ss.v
+FC:/Users/carva/Desktop/assteas/demo/store_size_ss.v
+!i122 60
+R42
+R17
+r1
+!s85 0
+31
+R58
+!s107 C:/Users/carva/Desktop/assteas/demo/store_size_ss.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/carva/Desktop/assteas/demo/store_size_ss.v|
+!i113 1
+R19
+R20
+Eula32
+R0
+R1
+R2
+R3
+!i122 61
+R4
+Z59 8C:/Users/carva/Desktop/assteas/demo/ula32.vhd
+Z60 FC:/Users/carva/Desktop/assteas/demo/ula32.vhd
+l0
+L63 1
+VM1`EhBco;Cb9<:6CC>b?e2
+!s100 bGmbVJaTC>R`I<lBgn7@L3
+R7
+32
+Z61 !s110 1678641339
+!i10b 1
+Z62 !s108 1678641339.000000
+Z63 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/carva/Desktop/assteas/demo/ula32.vhd|
+Z64 !s107 C:/Users/carva/Desktop/assteas/demo/ula32.vhd|
+!i113 1
+R12
+R13
+Abehavioral
+R1
+R2
+R3
+DEx4 work 5 ula32 0 22 M1`EhBco;Cb9<:6CC>b?e2
+!i122 61
+l89
+L79 138
+VF94M;2UJ^55hCen3Z[Kfk0
+!s100 1E>E2KjDKb=5dkES8U2ha0
+R7
+32
+R61
+!i10b 1
+R62
+R63
+R64
+!i113 1
+R12
+R13
