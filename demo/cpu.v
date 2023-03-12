@@ -1,4 +1,3 @@
-
 module cpu (
     input wire clk,
     input wire reset
@@ -88,7 +87,7 @@ module cpu (
     wire [31:0] Mux_SR_num_out;
     wire [4:0] Xtend_32x5_out;
     wire [31:0] SR_out;
-    wire Mdr_out;
+    wire [31:0] Mdr_out;
     wire [31:0] LS_out;
 
     wire [31:0] SS_out;
@@ -105,7 +104,7 @@ module cpu (
         Mux_iord_out,
         clk, 
         MEM_rw,
-        image.png,
+        SS_out,
         MEM_to_IR
     );
 
