@@ -23,7 +23,13 @@ module control_unit (
     output reg [2:0] muxRegDst,
     output reg [2:0] muxMemToReg,
     output reg [2:0] muxPCSource,
-    output reg rstOut
+    output reg rstOut,
+    output reg [2:0] SR_c,
+    output reg [2:0] SRNumSel,
+    output reg MdrWrite,
+    output reg [2:0] SRInputSel,
+    output reg [1:0] LS_c,
+    output reg [1:0] SS_c
 );
 
 //sram, lui, sb, sh
@@ -50,6 +56,40 @@ parameter ST_RTE = 7'd23;
 parameter ST_SLT = 7'd40;
 parameter ST_SLTI = 7'd42; 
 parameter ST_BREAK = 7'd44;
+
+parameter ST_SLL_1 = 7'd50;
+parameter ST_SLL_2 = 7'd51;
+parameter ST_SLL_3 = 7'd52;
+parameter ST_SLL_4 = 7'd53;
+
+parameter ST_SLLV_1 = 7'd54;
+parameter ST_SLLV_2 = 7'd55;
+parameter ST_SLLV_3 = 7'd56;
+parameter ST_SLLV_4 = 7'd57;
+
+parameter ST_SRA_1 = 7'd90;
+parameter ST_SRA_2 = 7'd91;
+parameter ST_SRA_3 = 7'd92;
+parameter ST_SRA_4 = 7'd93;
+
+parameter ST_SRAV_1 = 7'd33;
+parameter ST_SRAV_2 = 7'd34;
+parameter ST_SRAV_3 = 7'd35;
+parameter ST_SRAV_4 = 7'd36;
+
+parameter ST_SRL_1 = 7'd18;
+parameter ST_SRL_2 = 7'd19;
+parameter ST_SRL_3 = 7'd20;
+parameter ST_SRL_4 = 7'd21;
+
+
+parameter ST_SW_1 = 7'd65;
+parameter ST_SW_2 = 7'd66;
+
+parameter ST_LB_1 = 7'd73;
+parameter ST_LB_2 = 7'd74;
+parameter ST_LB_3 = 7'd75;
+parameter ST_LB_4 = 7'd76;
 
 
 //J type STATES
@@ -316,6 +356,130 @@ parameter OP_JAL = 7'h3;
                     PCWrite <= 1'b1;
                 end
             end
+//###################################################################
+            ST_SLL_1: begin
+                SRInputSel <= 2'b10;
+                SRNumSel <= 2'b01;
+                SR_c <= 3'b001; 
+            end
+
+            ST_SLL_2: begin
+                SR_c <= 3'b010;
+            end
+            ST_SLL_3: begin
+                SR_c <= 3'b000;
+                rstOut <= 3'b000;
+            end
+            ST_SLL_4: begin
+                muxMemToReg <= 3'b001;
+                muxRegDst <= 3'b010;
+                RegWrite <= 1'b1;
+            end
+//#####################################################################
+            ST_SRA_1: begin
+                SRInputSel <= 2'b10;
+                SRNumSel <= 2'b01;
+                SR_c <= 3'b001;
+            end
+            ST_SRA_2: begin
+                SR_c <= 3'b100;
+            end
+            ST_SRA_3: begin
+                SR_c <= 3'b000;
+                rstOut <= 3'b000;
+            end
+            ST_SRA_4: begin
+                muxMemToReg <= 3'b001;
+                muxRegDst <= 3'b010;
+                RegWrite <= 1'b1;
+            end
+            
+//#########################################################
+            ST_SLLV_1: begin
+                SRInputSel <= 2'b01;
+                SRNumSel <= 2'b00;
+                SR_c <= 3'b001; 
+            end
+            ST_SLLV_2: begin
+                SR_c <= 3'b010;
+            end
+            ST_SLLV_3: begin
+                SR_c <= 3'b000;
+                rstOut <= 3'b000;
+            end
+            ST_SLLV_4: begin
+                muxMemToReg <= 3'b001;
+                muxRegDst <= 3'b010;
+                RegWrite <= 1'b1;
+            end
+//##########################################################
+            ST_SRL_1: begin
+                SRInputSel <= 2'b10;
+                SRNumSel <= 2'b01;
+                SR_c <= 3'b001;
+            end
+            ST_SRL_2: begin
+                SR_c <= 3'b011;                                 // ESTOU AQUI
+            end
+            ST_SRL_3: begin
+                SR_c <= 3'b000;
+                rstOut <= 3'b000;
+            end
+            ST_SRL_4: begin
+                muxMemToReg <= 3'b001;
+                muxRegDst <= 3'b010;
+                RegWrite <= 1'b1;
+            end
+//#############################################################
+            ST_SRAV_1: begin
+                SRInputSel <= 2'b01;
+                SRNumSel <= 2'b00;
+                SR_c <= 3'b001; 
+            end
+            ST_SRAV_2: begin
+                SR_c <= 3'b100;
+            end
+            ST_SRAV_3: begin
+                SR_c <= 3'b000;
+                rstOut <= 3'b000;
+            end
+            ST_SRAV_4: begin
+                muxMemToReg <= 3'b001;
+                muxRegDst <= 3'b010;
+                RegWrite <= 1'b1;
+            end
+            
+
+            ST_SW_1: begin
+                muxAluSrcA <= 3'b010;
+                muxAluSrcB <= 3'b010;
+                aluOP <= 3'b001;
+                SS_c <= 2'b11;
+            end
+            ST_SW_2: begin
+                muxIord <= 3'b001;
+                memRW <= 1'b1;
+            end
+
+            ST_LB_1:begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b10;
+                aluOP <= 3'b001;
+            end
+            ST_LB_2: begin
+                muxIord <= 3'b001;
+                memRW <= 1'b0;
+            end
+            ST_LB_3: begin
+                muxIord <= 3'b001;
+                memRW <= 1'b0;
+            end
+            ST_LB_4: begin
+                LS_c <= 2'b01;
+                muxMemToReg <= 3'b100;
+                muxRegDst <= 3'b000;
+                RegWrite <= 1'b1;
+            end
 
             ST_COMMON_WAIT,
             ST_WAIT:
@@ -371,6 +535,21 @@ parameter OP_JAL = 7'h3;
 
                                 OP_RTE:
 				                    STATE <= ST_RTE;    
+
+                                OP_SLL:
+                                    STATE <= ST_SLL_1;
+                                
+                                OP_SLLV:
+                                    STATE <= ST_SLLV_1;
+                                
+                                OP_SRA:
+                                    STATE <= ST_SRA_1;
+                                
+                                OP_SRAV:
+                                    STATE <= ST_SRAV_1;
+                                
+                                OP_SRL:
+                                    STATE <= ST_SRL_1;
                             endcase
                             
                         OP_ADDI:
@@ -399,6 +578,12 @@ parameter OP_JAL = 7'h3;
 
                         OP_JAL:
                             STATE <= ST_JAL;   
+
+                        OP_SW:
+                            STATE <= ST_SW_1;
+
+                        OP_LB:
+                            STATE <= ST_LB_1;
                     endcase
 
                 ST_ADD:
@@ -464,6 +649,64 @@ parameter OP_JAL = 7'h3;
                 ST_BGT_1:
                     STATE <= ST_COMMON_0;
 
+                ST_SLL_1:
+                    STATE <= ST_SLL_2;
+                ST_SLL_2:
+                    STATE <= ST_SLL_3;
+                ST_SLL_3:
+                    STATE <= ST_SLL_4;
+                ST_SLL_4:
+                    STATE <= ST_WAIT;
+
+                ST_SLLV_1:
+                    STATE <= ST_SLLV_2;   
+                ST_SLLV_2:
+                    STATE <= ST_SLLV_3;
+                ST_SLLV_3:
+                    STATE <= ST_SLLV_4;
+                ST_SLLV_4:
+                    STATE <= ST_WAIT;
+
+                ST_SRA_1:
+                    STATE <= ST_SRA_2;
+                ST_SRA_2:
+                    STATE <= ST_SRA_3;
+                ST_SRA_3:
+                    STATE <= ST_SRA_4;
+                ST_SRA_4:
+                    STATE <= ST_WAIT;
+
+                ST_SRAV_1:
+                    STATE <= ST_SRAV_2;
+                ST_SRAV_2:
+                    STATE <= ST_SRAV_3;
+                ST_SRAV_3:
+                    STATE <= ST_SRAV_4;
+                ST_SRAV_4:
+                    STATE <= ST_WAIT;
+
+                ST_SW_1:
+                    STATE <= ST_SW_2;
+                ST_SW_2:
+                    STATE <= ST_COMMON_0;
+
+                ST_SRL_1:
+                    STATE <= ST_SRL_2;
+                ST_SRL_2:
+                    STATE <= ST_SRL_3;
+                ST_SRL_3:
+                    STATE <= ST_SRL_4;
+                ST_SRL_4:
+                    STATE <= ST_WAIT;
+
+                ST_LB_1:
+                    STATE <= ST_LB_2;
+                ST_LB_2:
+                    STATE <= ST_LB_3;
+                ST_LB_3:
+                    STATE <= ST_LB_4;
+                ST_LB_4:
+                    STATE <= ST_COMMON_0;
             endcase
         end
     end    
