@@ -91,6 +91,18 @@ parameter ST_SRAV_1 = 7'd60;
 parameter ST_SRAV_2 = 7'd61;
 parameter ST_SRAV_3 = 7'd62;
 
+parameter ST_SB_0 = 7'd80;
+parameter ST_SB_1 = 7'd81;
+parameter ST_SB_2 = 7'd82;
+parameter ST_SB_3 = 7'd83;
+parameter ST_SB_4 = 7'd84;
+
+parameter ST_SH_0 = 7'd85;
+parameter ST_SH_1 = 7'd86;
+parameter ST_SH_2 = 7'd87;
+parameter ST_SH_3 = 7'd88;
+parameter ST_SH_4 = 7'd89;
+
 //J type STATES
 parameter ST_J = 7'd60;
 parameter ST_JAL = 7'd61;
@@ -418,6 +430,54 @@ parameter OP_JAL = 7'h3;
                 
             end
 
+            ST_SB_0: begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b10;
+                aluOP <= 3'b001;
+                muxIord <= 3'b010;
+                memRW <= 1'b0;
+            end
+
+            ST_SB_1: begin
+                rstOut <= 3'b000;
+            end
+
+            ST_SB_2: begin
+                MdrWrite <= 1'b1;
+            end
+
+            ST_SB_3: begin
+                SS_c <= 2'b11;
+            end
+
+            ST_SB_4: begin
+                memRW <= 1'b1;
+            end
+
+            ST_SH_0: begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b10;
+                aluOP <= 3'b001;
+                muxIord <= 3'b010;
+                memRW <= 1'b0;
+            end
+
+            ST_SH_1: begin
+                rstOut <= 3'b000;
+            end
+
+            ST_SH_2: begin
+                MdrWrite <= 1'b1;
+            end
+
+            ST_SH_3: begin
+                SS_c <= 2'b10;
+            end
+
+            ST_SH_4: begin
+                memRW <= 1'b1;
+            end
+
             ST_COMMON_WAIT,
             ST_WAIT:
                 rstOut <= 3'b000;
@@ -512,6 +572,12 @@ parameter OP_JAL = 7'h3;
 
                         OP_ADDIU:
                             STATE <= ST_ADDIU;
+
+                        OP_SB:
+                            STATE <= ST_SB_0;
+
+                        OP_SH:
+                            STATE <= ST_SH_0;
                         
                         OP_J:
                             STATE <= ST_J;
@@ -639,6 +705,28 @@ parameter OP_JAL = 7'h3;
                 ST_SRAV_2:
                     STATE <= ST_SRAV_3;
                 ST_SRAV_3:
+                    STATE <= ST_COMMON_0;
+
+                ST_SB_0:
+                    STATE <= ST_SB_1;
+                ST_SB_1:
+                    STATE <= ST_SB_2;
+                ST_SB_2:
+                    STATE <= ST_SB_3;
+                ST_SB_3:
+                    STATE <= ST_SB_4;
+                ST_SB_4:
+                    STATE <= ST_COMMON_0;
+
+                ST_SH_0:
+                    STATE <= ST_SH_1;
+                ST_SH_1:
+                    STATE <= ST_SH_2;
+                ST_SH_2:
+                    STATE <= ST_SH_3;
+                ST_SH_3:
+                    STATE <= ST_SH_4;
+                ST_SH_4:
                     STATE <= ST_COMMON_0;
 
             endcase
