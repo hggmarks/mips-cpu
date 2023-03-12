@@ -16,7 +16,6 @@ module control_unit (
     output reg ABWrite,
     output reg AluOutWrite,
     output reg EpcWrite,
-    output reg MdrWrite,
     output reg [2:0] aluOP,
     output reg [2:0] muxIord,
     output reg [1:0] muxAluSrcA,
@@ -24,12 +23,16 @@ module control_unit (
     output reg [2:0] muxRegDst,
     output reg [2:0] muxMemToReg,
     output reg [2:0] muxPCSource,
-    output reg [2:0] SRControl,
-    output reg [1:0] SRInputSel,
-    output reg [1:0] SRNumSel,
-    output reg rstOut
+    output reg rstOut,
+    output reg [2:0] SR_c,
+    output reg [2:0] SRNumSel,
+    output reg MdrWrite,
+    output reg [2:0] SRInputSel,
+    output reg [1:0] LS_c,
+    output reg [1:0] SS_c
 );
 
+//lui, sb, sh
 
 //Variables
 reg [5:0] COUNTER;
@@ -37,13 +40,11 @@ reg [6:0] STATE;
 
 parameter ST_WAIT = 7'd127;
 parameter ST_RESET = 7'd0;
-
 parameter ST_COMMON_0 = 7'd1;
 parameter ST_COMMON_1 = 7'd2;
 parameter ST_COMMON_2 = 7'd3;
 parameter ST_COMMON_WAIT = 7'd4;
 parameter ST_ADD = 7'd5;
-
 parameter ST_ADDI = 7'd6; //aumentar esse valor depois de adicionar 
 parameter ST_AND = 7'd7;
 parameter ST_SUB = 7'd8;
@@ -51,23 +52,90 @@ parameter ST_ADDIU = 7'd9;
  
 parameter ST_JR = 7'd15;
 parameter ST_RTE = 7'd23;
+parameter ST_BEQ_0 = 7'd24; ///
+parameter ST_BEQ_1 = 7'd25; ///
+parameter ST_BNE_0 = 7'd26; ///
+parameter ST_BNE_1 = 7'd27; ///
+parameter ST_BLE_0 = 7'd28; ///
+parameter ST_BLE_1 = 7'd29; ///
+parameter ST_BGT_0 = 7'd30; ///
+parameter ST_BGT_1 = 7'd31; ///
+parameter ST_SRAM_0 = 7'd32;
+parameter ST_SRAM_1 = 7'd33;
+parameter ST_SRAM_2 = 7'd34;
+parameter ST_SRAM_3 = 7'd35;
+parameter ST_SRAM_4 = 7'd36;
+parameter ST_SRAM_5 = 7'd37;
+
+parameter ST_LUI_0 = 7'd40;
+parameter ST_LUI_1 = 7'd41;
+parameter ST_LUI_2 = 7'd42;
+parameter ST_LUI_3 = 7'd43;
+
+parameter ST_SLT = 7'd47;
+parameter ST_SLTI = 7'd48; 
+parameter ST_BREAK = 7'd49;
+parameter ST_SLL_1 = 7'd50;
+parameter ST_SLL_2 = 7'd51;
+parameter ST_SLL_3 = 7'd52;
+
+parameter ST_SLLV_1 = 7'd53;
+parameter ST_SLLV_2 = 7'd54;
+parameter ST_SLLV_3 = 7'd55;
+
+parameter ST_SRA_1 = 7'd56;
+parameter ST_SRA_2 = 7'd57;
+parameter ST_SRA_3 = 7'd58;
+
+parameter ST_SRAV_1 = 7'd60;
+parameter ST_SRAV_2 = 7'd61;
+parameter ST_SRAV_3 = 7'd62;
 
 //J type STATES
 parameter ST_J = 7'd60;
 parameter ST_JAL = 7'd61;
 
+
+
+//Instruções tipo R
 parameter TYPE_R = 7'h0;
     parameter OP_ADD = 7'h20;
-    parameter OP_JR = 7'h8; //igual ao addi mas sao campos diferentes (funct x opcode)
-
-    parameter OP_RTE = 7'h13;
     parameter OP_AND = 7'h24;
+    parameter OP_DIV = 7'h1a;
+    parameter OP_MULT = 7'h18;
+    parameter OP_JR = 7'h8;
+    parameter OP_MFHI = 7'h10;
+    parameter OP_MFLO = 7'h12;
+    parameter OP_SLL = 7'h0;
+    parameter OP_SLLV = 7'h4;
+    parameter OP_SLT = 7'h2a;
+    parameter OP_SRA = 7'h3;
+    parameter OP_SRAV = 7'h7;
+    parameter OP_SRL = 7'h2;
     parameter OP_SUB = 7'h22;
+    parameter OP_BREAK = 7'hd;
+    parameter OP_RTE = 7'h13;
+    parameter OP_XCHG = 7'h5;
 
-parameter OP_ADDIU = 7'h9;
 
+//Instruções tipo I
 parameter OP_ADDI = 7'h8;
+parameter OP_ADDIU = 7'h9;
+parameter OP_BEQ = 7'h4;
+parameter OP_BNE = 7'h5;
+parameter OP_BLE = 7'h6;
+parameter OP_BGT = 7'h7;
+parameter OP_SRAM = 7'h1;
+parameter OP_LB = 7'h20;
+parameter OP_LH = 7'h21;
+parameter OP_LUI = 7'hf;
+parameter OP_LW = 7'h23;
+parameter OP_SB = 7'h28;
+parameter OP_SH = 7'h29;
+parameter OP_SLTI = 7'ha;
+parameter OP_SW = 7'h2b;
 
+//Instruções tipo J
 parameter OP_J = 7'h2;
 parameter OP_JAL = 7'h3;
 
@@ -100,10 +168,12 @@ parameter OP_JAL = 7'h3;
                 muxRegDst <= 3'b100;   ///
                 muxMemToReg <= 3'b000; ///
             end
+
             ST_COMMON_0: begin
                 muxIord <= 3'b000;
                 memRW <= 1'b0;
             end
+
             ST_COMMON_1: begin
                 muxAluSrcA <= 2'b00;
                 muxAluSrcB <= 2'b01;  // 4 do pc + 4
@@ -112,6 +182,7 @@ parameter OP_JAL = 7'h3;
                 PCWrite <= 1'b1;
                 IRWrite <= 1'b1;
             end
+
             ST_COMMON_2: begin
 		        ABWrite <= 1'b1;
                 muxAluSrcA <= 2'b00;
@@ -135,6 +206,32 @@ parameter OP_JAL = 7'h3;
                 muxRegDst <= 3'b010;
                 RegWrite <= 1'b1;
                 muxMemToReg <= 3'b110;
+            end
+
+            ST_SLT: begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b00;
+                aluOP <= 3'b111;
+                muxMemToReg <= 3'b101;
+                muxRegDst <= 3'b010; //DEVIA SER 001
+                RegWrite <= 1'b1;
+            end
+
+            ST_BREAK: begin
+                muxAluSrcA <= 2'b00;
+                muxAluSrcB <= 2'b01;
+                aluOP <= 3'b010;
+                muxPCSource <= 3'b001;
+                PCWrite <= 1'b1;
+            end
+
+            ST_SLTI: begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b10;
+                aluOP <= 3'b111;    
+                muxMemToReg <= 3'b101;
+                muxRegDst <= 3'b000;
+                RegWrite <= 1'b1;
             end
 
             ST_AND: begin
@@ -187,10 +284,143 @@ parameter OP_JAL = 7'h3;
                 RegWrite <= 1'b1;      ///
             end
 
+            ST_BEQ_0: begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b00;
+                aluOP <= 3'b111;
+            end
+
+            ST_BEQ_1: begin
+                //muxAluSrcA <= 2'b00;
+                //muxAluSrcB <= 2'b11;
+                //aluOP <= 001;
+                muxPCSource <= 3'b010;
+                if (igual) begin
+                    PCWrite <= 1'b1;
+                end
+            end
+
+            ST_BNE_0: begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b00;
+                aluOP <= 3'b111;
+            end
+
+            ST_BNE_1: begin
+                muxAluSrcA <= 2'b00;
+                muxAluSrcB <= 2'b11;
+                aluOP <= 001;
+                muxPCSource <= 3'b001;
+                if (!igual) begin
+                    PCWrite <= 1'b1;
+                end
+            end
+
+            ST_BLE_0: begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b00;
+                aluOP <= 3'b111;
+            end
+
+            ST_BLE_1: begin
+                muxAluSrcA <= 2'b00;
+                muxAluSrcB <= 2'b11;
+                aluOP <= 001;
+                muxPCSource <= 3'b001;
+                if (!maior) begin
+                    PCWrite <= 1'b1;
+                end
+            end
+
+            ST_BGT_0: begin
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b00;
+                aluOP <= 3'b111;
+            end
+
+            ST_BGT_1: begin
+                muxAluSrcA <= 2'b00;
+                muxAluSrcB <= 2'b11;
+                aluOP <= 001;
+                muxPCSource <= 3'b001;
+                if (maior) begin
+                    PCWrite <= 1'b1;
+                end
+            end
+
+            ST_SRAM_0: begin //esperando sw pra testar
+                muxAluSrcA <= 2'b10;
+                muxAluSrcB <= 2'b10;
+                aluOP <= 3'b001;
+                muxIord <= 3'b010;
+                memRW <= 1'b0;
+            end
+
+            ST_SRAM_1: begin 
+                rstOut <= 3'b000;
+            end
+
+            ST_SRAM_2: begin
+                MdrWrite <= 1'b1;
+            end
+
+            ST_SRAM_3: begin
+                SRNumSel <= 2'b10;
+                SRInputSel <= 2'b10;
+                SR_c <= 3'b001;
+            end
+
+            ST_SRAM_4: begin
+                SR_c <= 3'b000;
+            end
+
+            ST_SRAM_5: begin
+                muxRegDst <= 3'b000;
+                muxMemToReg <= 3'b001;
+                RegWrite <= 1'b1;
+            end
+
+            ST_LUI_0: begin
+                SRInputSel <= 2'b00;
+                SRNumSel <= 2'b11;
+                SR_c <= 3'b001;
+            end
+
+            ST_LUI_1: begin
+                SR_c <= 3'b010;
+            end
+
+            ST_LUI_2: begin
+                SR_c <= 3'b000;
+            end
+
+            ST_LUI_3: begin
+                muxMemToReg <= 3'b001; //mudança de estado em metade do clock?
+                muxRegDst <= 3'b000;
+                RegWrite <= 1'b1;
+            end
+
+            ST_SLL_1: begin
+                SRInputSel <= 2'b10;
+                SRNumSel <= 2'b01;
+                SR_c <= 3'b001; 
+            end
+
+            ST_SLL_2: begin
+                SRNumSel <= 2'b01;
+                SR_c <= 3'b010;
+            end
+
+            ST_SLL_3: begin
+                muxMemToReg <= 3'b010;
+                muxRegDst <= 3'b100;
+                RegWrite <= 1'b1;
+                
+            end
+
             ST_COMMON_WAIT,
             ST_WAIT:
                 rstOut <= 3'b000;
-
 
         endcase
     end
@@ -227,6 +457,12 @@ parameter OP_JAL = 7'h3;
 
                                 OP_AND:
                                     STATE <= ST_AND;
+                                
+                                OP_BREAK:
+                                    STATE <= ST_BREAK;
+
+                                OP_SLT:
+                                    STATE <= ST_SLT;
 
                                 OP_SUB:
                                     STATE <= ST_SUB;
@@ -234,12 +470,45 @@ parameter OP_JAL = 7'h3;
                                 OP_JR:
                                     STATE <= ST_JR;
 
-				                OP_RTE:
+                                OP_RTE:
 				                    STATE <= ST_RTE;    
-                            endcase
 
+                                OP_SLL:
+                                    STATE <= ST_SLL_1;
+                                
+                                OP_SLLV:
+                                    STATE <= ST_SLLV_1;
+                                
+                                OP_SRA:
+                                    STATE <= ST_SRA_1;
+                                
+                                OP_SRAV:
+                                    STATE <= ST_SRAV_1;
+                            endcase
+                            
                         OP_ADDI:
                             STATE <= ST_ADDI;
+
+                        OP_SLTI:
+                            STATE <= ST_SLTI;
+
+                        OP_BEQ:
+                            STATE <= ST_BEQ_0;
+                        
+                        OP_BNE:
+                            STATE <= ST_BNE_0;
+                        
+                        OP_BLE:
+                            STATE <= ST_BLE_0;
+
+                        OP_BGT:
+                            STATE <= ST_BGT_0;
+
+                        OP_SRAM:
+                            STATE <= ST_SRAM_0;         
+
+                        OP_LUI:
+                            STATE <= ST_LUI_0;               
 
                         OP_ADDIU:
                             STATE <= ST_ADDIU;
@@ -256,6 +525,15 @@ parameter OP_JAL = 7'h3;
 
                 ST_ADDI:
                     STATE <= ST_COMMON_0;
+
+                ST_SLT:
+                    STATE <= ST_COMMON_0;
+
+                ST_SLTI:
+                    STATE <= ST_COMMON_0;
+                
+                ST_BREAK:
+                    STATE <= ST_WAIT;
 
                 ST_AND:
                     STATE <= ST_COMMON_0;
@@ -279,6 +557,88 @@ parameter OP_JAL = 7'h3;
                     STATE <= ST_J;
 
                 ST_WAIT:
+                    STATE <= ST_COMMON_0;
+
+                ST_BEQ_0:
+                    STATE <= ST_BEQ_1;
+
+                ST_BEQ_1:
+                    STATE <= ST_COMMON_0;
+                
+                ST_BNE_0:
+                    STATE <= ST_BNE_1;
+                
+                ST_BNE_1:
+                    STATE <= ST_COMMON_0;
+
+                ST_BLE_0:
+                    STATE <= ST_BLE_1;
+                
+                ST_BLE_1:
+                    STATE <= ST_COMMON_0;
+                
+                ST_BGT_0:
+                    STATE <= ST_BGT_1;
+                
+                ST_BGT_1:
+                    STATE <= ST_COMMON_0;
+
+                ST_SRAM_0:
+                    STATE <= ST_SRAM_1;
+
+                ST_SRAM_1:
+                    STATE <= ST_SRAM_2;
+                
+                ST_SRAM_2:
+                    STATE <= ST_SRAM_3;
+                
+                ST_SRAM_3:
+                    STATE <= ST_SRAM_4;
+
+                ST_SRAM_4:
+                    STATE <= ST_SRAM_5;
+
+                ST_SRAM_5:
+                    STATE <= ST_COMMON_0;
+
+                ST_LUI_0:
+                    STATE <= ST_LUI_1;
+
+                ST_LUI_1:
+                    STATE <= ST_LUI_2;
+                
+                ST_LUI_2:
+                    STATE <= ST_LUI_3;
+
+                ST_LUI_3:
+                    STATE <= ST_COMMON_0;
+
+                ST_SLL_1:
+                    STATE <= ST_SLL_2;
+                ST_SLL_2:
+                    STATE <= ST_SLL_3;
+                ST_SLL_3:
+                    STATE <= ST_COMMON_0;
+
+                ST_SLLV_1:
+                    STATE <= ST_SLLV_2;   
+                ST_SLLV_2:
+                    STATE <= ST_SLLV_3;
+                ST_SLLV_3:
+                    STATE <= ST_COMMON_0;
+
+                ST_SRA_1:
+                    STATE <= ST_SRA_2;
+                ST_SRA_2:
+                    STATE <= ST_SRA_3;
+                ST_SRA_3:
+                    STATE <= ST_COMMON_0;
+
+                ST_SRAV_1:
+                    STATE <= ST_SRAV_2;
+                ST_SRAV_2:
+                    STATE <= ST_SRAV_3;
+                ST_SRAV_3:
                     STATE <= ST_COMMON_0;
 
             endcase
