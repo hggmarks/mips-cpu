@@ -13,17 +13,17 @@ Made with love and cooperation by a team of heroes:
 # Instructions
 - [x] add
 - [x] and
-- [ ] div
+- [x] div
 - [x] mult
 - [x] jr
-- [ ] mfhi
-- [ ] mflo
-- [ ] sll
-- [ ] sllv
+- [x] mfhi
+- [x] mflo
+- [x] sll
+- [x] sllv
 - [x] slt
-- [ ] sra
-- [ ] srav
-- [ ] srl
+- [x] sra
+- [x] srav
+- [x] srl
 - [x] sub
 - [x] break
 - [X] rte
@@ -37,7 +37,7 @@ Made with love and cooperation by a team of heroes:
 - [ ] sram
 - [ ] lb
 - [ ] lh
-- [ ] lui
+- [x] lui
 - [ ] lw
 - [ ] sb
 - [ ] sh
